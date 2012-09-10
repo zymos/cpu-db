@@ -1,6 +1,69 @@
-,Harris,286,CG80C286-16 ,,,,,CPU
-,Harris,286,CS80C286-16 ,,,,,CPU
-,Harris,286,CS80C286-20 ,,,,,CPU
-,Harris,286,CS80C286-25,,,,,CPU
-,Harris,8088,CP80C88  ,,,,,CPU
-,Harris,8088,IS80C88 ,,,,,CPU
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+Harris,8088,CP80C88  ,,,,,CPU
+Harris,8088,IS80C88 ,,,,,CPU
+Harris,8086,CP80C86-2,,,,,CPU
+Harris,8086,8405201QA,,,,,CPU
+Harris,8086,8405201XA,,,,,CPU
+Harris,8086,8405202QA,,,,,CPU
+Harris,8086,8405202XA,,,,,CPU
+Harris,8086,CD80C86,,,,,CPU
+Harris,8086,CD80C86-2,,,,,CPU
+Harris,8086,CD80C86-4,,,,,CPU
+Harris,8086,CP80C86,,,,,CPU
+Harris,8086,CP80C86-2,,,,,CPU
+Harris,8086,CP80C86-4,,,,,CPU
+Harris,8086,CS80C86,,,,,CPU
+Harris,8086,CS80C86-2,,,,,CPU
+Harris,8086,ID80C86,,,,,CPU
+Harris,8086,ID80C86-2,,,,,CPU
+Harris,8086,IP80C86,,,,,CPU
+Harris,8086,IP80C86-2,,,,,CPU
+Harris,8086,IS80C86,,,,,CPU
+Harris,8086,IS80C86-2,,,,,CPU
+Harris,8086,MD80C86-2/B,,,,,CPU
+Harris,8086,MD80C86/B,,,,,CPU
+Harris,8086,MR80C86-2/B,,,,,CPU
+Harris,8086,MR80C86/B,,,,,CPU
+Harris,8088,5962-8601601QA,,,,,CPU
+Harris,8088,5962-8601601XA,,,,,CPU
+Harris,8088,CD80C88,,,,,CPU
+Harris,8088,CD80C88-2,,,,,CPU
+Harris,8088,CP80C88,,,,,CPU
+Harris,8088,CP80C88-2,,,,,CPU
+Harris,8088,CS80C88,,,,,CPU
+Harris,8088,CS80C88-2,,,,,CPU
+Harris,8088,ID80C88,,,,,CPU
+Harris,8088,ID80C88-2,,,,,CPU
+Harris,8088,IP80C88,,,,,CPU
+Harris,8088,IP80C88-2,,,,,CPU
+Harris,8088,IS80C88,,,,,CPU
+Harris,8088,IS80C88-2,,,,,CPU
+Harris,8088,MD80C88-2/B,,,,,CPU
+Harris,8088,MD80C88/B,,,,,CPU
+Harris,8088,MR80C88-2/B,,,,,CPU
+Harris,8088,MR80C88/B,,,,,CPU
+Harris,286,CG80C286-12,,,,,CPU
+Harris,286,CG80C286-16,,,,,CPU
+Harris,286,CG80C286-16 ,,,,,CPU
+Harris,286,CS80C286-12,,,,,CPU
+Harris,286,CS80C286-16,,,,,CPU
+Harris,286,CS80C286-16 ,,,,,CPU
+Harris,286,CS80C286-20,,,,,CPU
+Harris,286,CS80C286-20 ,,,,,CPU
+Harris,286,CS80C286-25,,,,,CPU
+Harris,6100,HM-6100-2,,,,,CPU
+Harris,6100,HM-6100-9,M3-6100-9,,,,CPU
+Harris,6100,HM-6100A-2,,,,,CPU
+Harris,6100,HM-6100A-9 / M3-6100A-9,,,,,CPU
+Harris,6100,HM-6100C-9,,,,,CPU
+Harris,6100,M3-6100C-5,,,,,CPU
+Harris,1802,CDP1802ACD,,,,,
+Harris,1802,CDP1802ACDX,,,,,
+Harris,1802,CDP1802ACE,,,,,
+Harris,1802,CDP1802ACEX,,,,,
+Harris,1802,CDP1802ACQ,,,,,
+Harris,1802,CDP1802BCDX,,,,,
+Harris,1802,CDP1802BCE,,,,,
+Harris,1802,CDP1802BCEX,,,,,
+Harris,1802,CDP1802BCQ,,,,,
+Harris,1802,CDP1802CE,,,,,

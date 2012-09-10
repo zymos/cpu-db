@@ -1,11 +1,26 @@
-,Fujitsu,286,MBL80286-6 ,,,,,CPU
-,Fujitsu,286,MBL80286-8 ,,,,,CPU
-,Fujitsu,8086,MBL8086-2  ,,,,,CPU
-,Fujitsu,8088,MBL8088-2 ,,,,,CPU
-,Fujitsu,SPARC,MB86831 ,,,,,CPU
-,Fujitsu,SPARC,MB86900 ,,,,,CPU
-,Fujitsu,SPARC,MB86902 ,,,,,CPU
-,Fujitsu,SPARC,MB86903-40 ,,,,,CPU
-,Fujitsu,SPARC,MBCS70301HE  ,,,,,CPU
-,Fujitsu,SPARC,SFCB81147C ,,,,,CPU
-,Fujitsu,SPARC,SFCB81147FP,,,,,CPU
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+Fujitsu,286,MBL80286-6 ,,,,,CPU
+Fujitsu,286,MBL80286-8 ,,,,,CPU
+Fujitsu,8086,MBL8086-2  ,,,,,CPU
+Fujitsu,8088,MBL8088-2 ,,,,,CPU
+Fujitsu,SPARC,MB86831 ,,,,,CPU
+Fujitsu,SPARC,MB86900 ,,,,,CPU
+Fujitsu,SPARC,MB86902 ,,,,,CPU
+Fujitsu,SPARC,MB86903-40 ,,,,,CPU
+Fujitsu,SPARC,MBCS70301HE  ,,,,,CPU
+Fujitsu,SPARC,SFCB81147C ,,,,,CPU
+Fujitsu,SPARC,SFCB81147FP,,,,,CPU
+Fujitsu,8086,MBL8086-2,,,,,CPU
+Fujitsu,8088,MBL8088-2,,,,,CPU
+Fujitsu,FR,MB91101APMC,,,,,CPU
+Fujitsu,FR,MB91101APF,,,,,CPU
+Fujitsu,FR,MB91101APF-G-JNE1,,,,,CPU
+Fujitsu,8088,MBL8088-1,,,,,CPU
+Fujitsu,8086,MBL8086-1 white ceramic,,,,,CPU
+Fujitsu,8086,MBL8086-2 White ceramic,,,,,CPU
+Fujitsu,8086,MBL8086-2,,,,,CPU
+Fujitsu,MCS-48 (8042),MBL8042H,,,,,MCU
+Fujitsu,MCS-48 (8042),MBL8742H,,,,,MCU
+Fujitsu,MCS-48 (8049),MBL8749H,,,,,MCU
+Fujitsu,186,MBL80186,,,,,CPU
+Fujitsu,SPARC,MB86903-33,,,,,CPU

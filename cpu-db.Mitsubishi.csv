@@ -1,0 +1,11 @@
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+Mitsubishi,8080,M5L8080AP,,,,,CPU
+Mitsubishi,8085,M5M80C85AP-2,,,,,CPU
+Mitsubishi,8085,M5L8085AP,,,,,CPU
+Mitsubishi,8086,M5L8086S,,,,,CPU
+Mitsubishi,MCS-48 (8039),M5L8039P-11,,,,,MCU
+Mitsubishi,MCS-48 (8039),M5L8039P-6,,,,,MCU
+Mitsubishi,MCS-48 (8039),M5L8039P-8,,,,,MCU
+Mitsubishi,M16C/6N,M306N0FGTFP ,,,,,MCU
+Mitsubishi,,M5L8041A-205P,,,,,MCU
+Mitsubishi,,M5L8042-254P,,,,,MCU
