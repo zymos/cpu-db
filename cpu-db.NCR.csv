@@ -1,0 +1,4 @@
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+NCR,,6500/1,,,,,MCU
+NCR,,65C02C,,,,,CPU
+NCR,,65C02A,,,,,CPU

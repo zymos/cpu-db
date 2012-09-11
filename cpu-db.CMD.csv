@@ -1,0 +1,10 @@
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+CMD,,G65SC151PEI-1,,,,,MCU
+CMD,,G65SC151PEI-2,,,,,MCU
+CMD,,G65SC150PEI-1,,,,,MCU
+CMD,,G65SC150PEI-2,,,,,MCU
+CMD,,G65SC02-A,,,,,CPU
+CMD,,G65SC816PI-5,,,,,CPU
+CMD,,G65SC816PI-6,,,,,CPU
+CMD,,G65SC816PEI-5,,,,,CPU
+CMD,,G65SC816PEI-6,,,,,CPU

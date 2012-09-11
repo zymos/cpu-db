@@ -1,0 +1,20 @@
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
+Xilinx,PowerPC 405,XC2VP100FF1696,,,,,CPU
+Xilinx,PowerPC 405,XC2VP100FF1704,,,,,CPU
+Xilinx,PowerPC 405,XC2VP20FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP20FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VP2FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP30FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP30FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VP40FF1148,,,,,CPU
+Xilinx,PowerPC 405,XC2VP40FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP4FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1148,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1517,,,,,CPU
+Xilinx,PowerPC 405,XC2VP70FF1517,,,,,CPU
+Xilinx,PowerPC 405,XC2VP70FF1704,,,,,CPU
+Xilinx,PowerPC 405,XC2VP7FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP7FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VPX20FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VPX70FF1704,,,,,CPU
