@@ -1673,6 +1673,15 @@ Analog Devices,ADSP-2100,ADSP-2164BP-40,,,,,DSP
 Analog Devices,ADSP-2100,ADSP-2164BS-40,,,,,DSP
 Analog Devices,ADSP-2100,ADSP-2164KP-40,,,,,DSP
 Analog Devices,ADSP-2100,ADSP-2164KS-40,,,,,DSP
+CMD,,G65SC02-A,,,,,CPU
+CMD,,G65SC150PEI-1,,,,,MCU
+CMD,,G65SC150PEI-2,,,,,MCU
+CMD,,G65SC151PEI-1,,,,,MCU
+CMD,,G65SC151PEI-2,,,,,MCU
+CMD,,G65SC816PEI-5,,,,,CPU
+CMD,,G65SC816PEI-6,,,,,CPU
+CMD,,G65SC816PI-5,,,,,CPU
+CMD,,G65SC816PI-6,,,,,CPU
 Cypress,2900,CY2901CPC,,,,,BSP
 Cypress,2900,CY7C901-23DC,,,,,BSP
 Cypress,2900,CY7C901-31PC,,,,,BSP
@@ -2204,6 +2213,199 @@ DEC,PDP-11,PDP-11 J-11 ,,,,,CPU
 Fairchild,6800,F6800P,,,,,CPU
 Fairchild,F8,38501DC,,,,,CPU
 Fairchild,F8,3850PC,,,,,CPU
+Freescale,68000,MC68EC000EI20R ,,,,,CPU
+Freescale,68000,MC68HC000CFN10R2 ,,,,,CPU
+Freescale,68000,MC68HC000CFN12 ,,,,,CPU
+Freescale,68000,MC68HC000CFN16 ,,,,,CPU
+Freescale,68000,MC68HC000CFN16R2 ,,,,,CPU
+Freescale,68000,MC68HC000FN10 ,,,,,CPU
+Freescale,68000,MC68HC000FN10R2 ,,,,,CPU
+Freescale,68000,MC68HC000FN16 ,,,,,CPU
+Freescale,68000,MC68HC000FN8 ,,,,,CPU
+Freescale,68000,MC68HC000FN8R2 ,,,,,CPU
+Freescale,68300,MC68302AG16C ,,,,,MCU
+Freescale,68300,MC68302AG16VC ,,,,,MCU
+Freescale,68300,MC68302AG20C ,,,,,MCU
+Freescale,68300,MC68302AG20CB1 ,,,,,MCU
+Freescale,68300,MC68302AG25C ,,,,,MCU
+Freescale,68300,MC68302AG33C ,,,,,MCU
+Freescale,68300,MC68302CAG16VC ,,,,,MCU
+Freescale,68300,MC68302CAG16VCR2 ,,,,,MCU
+Freescale,68300,MC68302CEH16C ,,,,,MCU
+Freescale,68300,MC68302CEH20C ,,,,,MCU
+Freescale,68300,MC68302CFC16 ,,,,,MCU
+Freescale,68300,MC68302CFC16C ,,,,,MCU
+Freescale,68300,MC68302CFC20 ,,,,,MCU
+Freescale,68300,MC68302CFC20C ,,,,,MCU
+Freescale,68300,MC68302CPV16VC ,,,,,MCU
+Freescale,68300,MC68302CRC16 ,,,,,MCU
+Freescale,68300,MC68302CRC16C ,,,,,MCU
+Freescale,68300,MC68302CRC20 ,,,,,MCU
+Freescale,68300,MC68302CRC20C ,,,,,MCU
+Freescale,68300,MC68302EH16C ,,,,,MCU
+Freescale,68300,MC68302EH16CB1 ,,,,,MCU
+Freescale,68300,MC68302EH16CR2 ,,,,,MCU
+Freescale,68300,MC68302EH20C ,,,,,MCU
+Freescale,68300,MC68302EH20CB1 ,,,,,MCU
+Freescale,68300,MC68302EH20CR2 ,,,,,MCU
+Freescale,68300,MC68302EH25C ,,,,,MCU
+Freescale,68300,MC68302EH25CB1 ,,,,,MCU
+Freescale,68300,MC68302EH25CR2 ,,,,,MCU
+Freescale,68300,MC68302FC16 ,,,,,MCU
+Freescale,68300,MC68302FC16C ,,,,,MCU
+Freescale,68300,MC68302FC16CB1 ,,,,,MCU
+Freescale,68300,MC68302FC16CR2 ,,,,,MCU
+Freescale,68300,MC68302FC20 ,,,,,MCU
+Freescale,68300,MC68302FC20C ,,,,,MCU
+Freescale,68300,MC68302FC20CB1 ,,,,,MCU
+Freescale,68300,MC68302FC20CR2 ,,,,,MCU
+Freescale,68300,MC68302FC25 ,,,,,MCU
+Freescale,68300,MC68302FC25C ,,,,,MCU
+Freescale,68300,MC68302FC25CB1 ,,,,,MCU
+Freescale,68300,MC68302FC25CR2 ,,,,,MCU
+Freescale,68300,MC68302FE16 ,,,,,MCU
+Freescale,68300,MC68302FE20 ,,,,,MCU
+Freescale,68300,MC68302IFE16 ,,,,,MCU
+Freescale,68300,MC68302IRC16 ,,,,,MCU
+Freescale,68300,MC68302PV16 ,,,,,MCU
+Freescale,68300,MC68302PV16C ,,,,,MCU
+Freescale,68300,MC68302PV16V ,,,,,MCU
+Freescale,68300,MC68302PV16VC ,,,,,MCU
+Freescale,68300,MC68302PV20 ,,,,,MCU
+Freescale,68300,MC68302PV20C ,,,,,MCU
+Freescale,68300,MC68302PV20CB1 ,,,,,MCU
+Freescale,68300,MC68302PV25C ,,,,,MCU
+Freescale,68300,MC68302PV33C ,,,,,MCU
+Freescale,68300,MC68302RC16 ,,,,,MCU
+Freescale,68300,MC68302RC16C ,,,,,MCU
+Freescale,68300,MC68302RC20 ,,,,,MCU
+Freescale,68300,MC68302RC20C ,,,,,MCU
+Freescale,68300,MC68302RC25 ,,,,,MCU
+Freescale,68300,MC68302RC25C ,,,,,MCU
+Freescale,68300,MC68306AG16B ,,,,,MCU
+Freescale,68300,MC68306AG20B ,,,,,MCU
+Freescale,68300,MC68306CEH16B ,,,,,MCU
+Freescale,68300,MC68306CFC16B ,,,,,MCU
+Freescale,68300,MC68306FC16 ,,,,,MCU
+Freescale,68300,MC68306FC16B ,,,,,MCU
+Freescale,68300,MC68306PV16 ,,,,,MCU
+Freescale,68300,MC68306PV16B ,,,,,MCU
+Freescale,68300,MC68306PV20B ,,,,,MCU
+Freescale,68300,MC68307CFG16 ,,,,,MCU
+Freescale,68300,MC68307FG16 ,,,,,MCU
+Freescale,68300,MC68307FG16V ,,,,,MCU
+Freescale,68300,MC68307PU16 ,,,,,MCU
+Freescale,68300,MC68307PU16V ,,,,,MCU
+Freescale,68300,MC68307PU8V ,,,,,MCU
+Freescale,68300,MC68330CFE16 ,,,,,MCU
+Freescale,68300,MC68330CFE8V ,,,,,MCU
+Freescale,68300,MC68330CFG16 ,,,,,MCU
+Freescale,68300,MC68330CPV16A ,,,,,MCU
+Freescale,68300,MC68330FE16 ,,,,,MCU
+Freescale,68300,MC68330FE16V ,,,,,MCU
+Freescale,68300,MC68330FE25 ,,,,,MCU
+Freescale,68300,MC68330FE8V ,,,,,MCU
+Freescale,68300,MC68330FG16 ,,,,,MCU
+Freescale,68300,MC68330PV16A ,,,,,MCU
+Freescale,68300,MC68330PV16VA ,,,,,MCU
+Freescale,68300,MC68330PV25A ,,,,,MCU
+Freescale,68300,MC68331CAG16 ,,,,,MCU
+Freescale,68300,MC68331CAG20 ,,,,,MCU
+Freescale,68300,MC68331CAG25 ,,,,,MCU
+Freescale,68300,MC68331CEH16 ,,,,,MCU
+Freescale,68300,MC68331CEH20 ,,,,,MCU
+Freescale,68300,MC68331CEH25 ,,,,,MCU
+Freescale,68300,MC68331CFC16 ,,,,,MCU
+Freescale,68300,MC68331CFC16B1 ,,,,,MCU
+Freescale,68300,MC68331CFC20 ,,,,,MCU
+Freescale,68300,MC68331CFC20B1 ,,,,,MCU
+Freescale,68300,MC68331CFC25 ,,,,,MCU
+Freescale,68300,MC68331CFC25B1 ,,,,,MCU
+Freescale,68300,MC68331CFV16 ,,,,,MCU
+Freescale,68300,MC68331CFV20 ,,,,,MCU
+Freescale,68300,MC68331CPV16 ,,,,,MCU
+Freescale,68300,MC68331CPV16B1 ,,,,,MCU
+Freescale,68300,MC68331CPV20 ,,,,,MCU
+Freescale,68300,MC68331CPV20B1 ,,,,,MCU
+Freescale,68300,MC68331CPV25 ,,,,,MCU
+Freescale,68300,MC68331MEH16 ,,,,,MCU
+Freescale,68300,MC68331MFC16 ,,,,,MCU
+Freescale,68300,MC68331MFC20 ,,,,,MCU
+Freescale,68300,MC68331MFV16 ,,,,,MCU
+Freescale,68300,MC68331MFV20 ,,,,,MCU
+Freescale,68300,MC68331MPV16 ,,,,,MCU
+Freescale,68300,MC68331MPV20 ,,,,,MCU
+Freescale,68300,MC68331VEH16 ,,,,,MCU
+Freescale,68300,MC68331VFC16 ,,,,,MCU
+Freescale,68300,MC68331VFC20 ,,,,,MCU
+Freescale,68300,MC68331VFV16 ,,,,,MCU
+Freescale,68300,MC68331VFV20 ,,,,,MCU
+Freescale,68300,MC68331VPV16 ,,,,,MCU
+Freescale,68300,MC68331VPV20 ,,,,,MCU
+Freescale,68300,MC68332ACAG16 ,,,,,MCU
+Freescale,68300,MC68332ACAG20 ,,,,,MCU
+Freescale,68300,MC68332ACAG25 ,,,,,MCU
+Freescale,68300,MC68332ACEH16 ,,,,,MCU
+Freescale,68300,MC68332ACEH20 ,,,,,MCU
+Freescale,68300,MC68332ACEH25 ,,,,,MCU
+Freescale,68300,MC68332ACFC16 ,,,,,MCU
+Freescale,68300,MC68332ACFC16B1 ,,,,,MCU
+Freescale,68300,MC68332ACFC20 ,,,,,MCU
+Freescale,68300,MC68332ACFC20B1 ,,,,,MCU
+Freescale,68300,MC68332ACFC25 ,,,,,MCU
+Freescale,68300,MC68332ACFC25B1 ,,,,,MCU
+Freescale,68300,MC68332ACFV16 ,,,,,MCU
+Freescale,68300,MC68332ACFV20 ,,,,,MCU
+Freescale,68300,MC68332ACPV16 ,,,,,MCU
+Freescale,68300,MC68332ACPV16B1 ,,,,,MCU
+Freescale,68300,MC68332ACPV20 ,,,,,MCU
+Freescale,68300,MC68332ACPV20B1 ,,,,,MCU
+Freescale,68300,MC68332ACPV25 ,,,,,MCU
+Freescale,68300,MC68332ACPV25B1 ,,,,,MCU
+Freescale,ColdFire,MCF5232CAB80 ,,,,,MCU
+Freescale,ColdFire,MCF5232CVM100 ,,,,,MCU
+Freescale,ColdFire,MCF5232CVM150 ,,,,,MCU
+Freescale,ColdFire,MCF5233CVM100 ,,,,,MCU
+Freescale,ColdFire,MCF5233CVM150 ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM100 ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM100 ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM100J ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM100J ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM150 ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM150 ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM150J ,,,,,MCU
+Freescale,ColdFire,MCF5234CVM150J ,,,,,MCU
+Freescale,ColdFire,MCF5235CVF150 ,,,,,MCU
+Freescale,ColdFire,MCF5235CVM100 ,,,,,MCU
+Freescale,ColdFire,MCF5235CVM150 ,,,,,MCU
+Freescale,ColdFire,MCF5249CVM140,,,,,MCU
+Freescale,ColdFire,MCF5249CVM140,,,,,MCU
+Freescale,ColdFire,MCF5249LAG120,,,,,MCU
+Freescale,ColdFire,MCF5249LCAG120,,,,,MCU
+Freescale,ColdFire,PCF5234CVM150 ,,,,,MCU
+Freescale,ColdFire,SCF5249LAG120,,,,,MCU
+Freescale,ColdFire,SCF5249LAG133,,,,,MCU
+Freescale,ColdFire,SCF5249VM140,,,,,MCU
+Freescale,PowerQUICC,MC880CVR133 ,,,,,MCU
+Freescale,PowerQUICC,MC880CVR66 ,,,,,MCU
+Freescale,PowerQUICC,MC880CZP133 ,,,,,MCU
+Freescale,PowerQUICC,MC880CZP66 ,,,,,MCU
+Freescale,PowerQUICC,MC880VR133 ,,,,,MCU
+Freescale,PowerQUICC,MC880VR66 ,,,,,MCU
+Freescale,PowerQUICC,MPC880VR80 ,,,,,MCU
+Freescale,PowerQUICC,MPC880ZP133 ,,,,,MCU
+Freescale,PowerQUICC,MPC880ZP66 ,,,,,MCU
+Freescale,PowerQUICC,MPC880ZP80 ,,,,,MCU
+Freescale,PowerQUICC,MPC885CVR133 ,,,,,MCU
+Freescale,PowerQUICC,MPC885CVR66 ,,,,,MCU
+Freescale,PowerQUICC,MPC885CZP133 ,,,,,MCU
+Freescale,PowerQUICC,MPC885CZP66 ,,,,,MCU
+Freescale,PowerQUICC,MPC885VR133 ,,,,,MCU
+Freescale,PowerQUICC,MPC885VR66 ,,,,,MCU
+Freescale,PowerQUICC,MPC885VR80 ,,,,,MCU
+Freescale,PowerQUICC,MPC885ZP133 ,,,,,MCU
+Freescale,PowerQUICC,MPC885ZP66 ,,,,,MCU
+Freescale,PowerQUICC,MPC885ZP80 ,,,,,MCU
 Fujitsu,186,MBL80186,,,,,CPU
 Fujitsu,286,MBL80286-6 ,,,,,CPU
 Fujitsu,286,MBL80286-8 ,,,,,CPU
@@ -4633,6 +4835,7 @@ MHS,MCS-51 (8032),P-80C32,,,,,MCU
 MHS,MCS-51 (8032),S-80C32-1,,,,,MCU
 MHS,MCS-51 (8032),S-80C32-40,,,,,MCU
 MHS,MCS-51 (8052),S-80C154u-25,,,,,MCU
+MMI,5701/6701,MMI6701D,,,,,BSP
 MOS,,6500/1-034,,,,,MCU
 MOS,6500,6502AD,,,,,CPU
 MOS,6500,6502B,,,,,CPU
@@ -6059,6 +6262,9 @@ Motorola,PowerPC 800,XPC860TZP66D3,,,,,CPU
 Motorola,PowerPC 800,XPC860TZP66D4,,,,,CPU
 Motorola,PowerPC 800,XPC860TZP80D3,,,,,CPU
 Motorola,PowerPC 800,XPC860TZP80D4,,,,,CPU
+NCR,,6500/1,,,,,MCU
+NCR,,65C02A,,,,,CPU
+NCR,,65C02C,,,,,CPU
 NEC,V20,D70108C-10,,,,,CPU
 NEC,V20,D70108C-5,,,,,CPU
 NEC,V20,D70108C-8,,,,,CPU
@@ -6103,6 +6309,194 @@ NEC,V50,D70216L-10,,,,,CPU
 NEC,V50,D70216L-8,,,,,CPU
 NEC,V50,D70216R-10,,,,,CPU
 NEC,V50,D70216R-8,,,,,CPU
+National Semiconductor,,INS8050-11RTZ/N,,,,,MCU
+National Semiconductor,2901,IDM2901A-1DC,,,,,BSP
+National Semiconductor,2901,IDM2901A-1DM,,,,,BSP
+National Semiconductor,2901,IDM2901A-1DM/883,,,,,BSP
+National Semiconductor,2901,IDM2901A-1JC,,,,,BSP
+National Semiconductor,2901,IDM2901A-1NC,,,,,BSP
+National Semiconductor,2901,IDM2901A-2DC,,,,,BSP
+National Semiconductor,2901,IDM2901A-2DM,,,,,BSP
+National Semiconductor,2901,IDM2901A-2DM/883,,,,,BSP
+National Semiconductor,2901,IDM2901A-2JC,,,,,BSP
+National Semiconductor,2901,IDM2901A-2NC,,,,,BSP
+National Semiconductor,2901,IDM2901ADC,,,,,BSP
+National Semiconductor,2901,IDM2901ADM,,,,,BSP
+National Semiconductor,2901,IDM2901ADM/883,,,,,BSP
+National Semiconductor,2901,IDM2901AJC,,,,,BSP
+National Semiconductor,2901,IDM2901ANC,,,,,BSP
+National Semiconductor,2901,IDM2903ADC,,,,,BSP
+National Semiconductor,2901,IDM2903ADM,,,,,BSP
+National Semiconductor,2901,IDM2903ADM/883,,,,,BSP
+National Semiconductor,32000,NS32016D-10,NS16032D-10,,,,CPU
+National Semiconductor,32000,NS32016D-6,NS16032D-6,,,,CPU
+National Semiconductor,32000,NS32016D-8,NS16032D-8,,,,CPU
+National Semiconductor,32000,NS32016N-10,NS16032N-10,,,,CPU
+National Semiconductor,32000,NS32016N-6,NS16032N-6,,,,CPU
+National Semiconductor,32000,NS32016N-8,NS16032N-8,,,,CPU
+National Semiconductor,32000,NS32032E10 ,,,,,
+National Semiconductor,32000,NS32032E6 ,,,,,
+National Semiconductor,32000,NS32032E8 ,,,,,
+National Semiconductor,32000,NS32032V10 ,,,,,
+National Semiconductor,32000,NS32032V6 ,,,,,
+National Semiconductor,32000,NS32032V8 ,,,,,
+National Semiconductor,32000,NS32081D-10,,,,,CPU
+National Semiconductor,32000,NS32081D-15,,,,,CPU
+National Semiconductor,32000,NS32081D-6,,,,,CPU
+National Semiconductor,32000,NS32081D-8,,,,,CPU
+National Semiconductor,32000,NS32081N-10,,,,,CPU
+National Semiconductor,32000,NS32081N-15,,,,,CPU
+National Semiconductor,32000,NS32332U-15,,,,,CPU
+National Semiconductor,32000,NS32CG16-10 ,,,,,
+National Semiconductor,32000,NS32CG16-15 ,,,,,
+National Semiconductor,32000,NS32CG160-15 ,,,,,
+National Semiconductor,32000,NS32CG160-20 ,,,,,
+National Semiconductor,32000,NS32CG160-25 ,,,,,
+National Semiconductor,32000,NS32CG160V-15 ,,,,,
+National Semiconductor,32000,NS32CG160V-20 ,,,,,
+National Semiconductor,32000,NS32CG160V-25 ,,,,,
+National Semiconductor,32000,NS32FV100 ,,,,,
+National Semiconductor,32000,NS32FV100-20 ,,,,,
+National Semiconductor,32000,NS32FV100-25 ,,,,,
+National Semiconductor,32000,NS32FV100FV ,,,,,
+National Semiconductor,32000,NS32FV100FVNOPB ,,,,,
+National Semiconductor,32000,NS32FV100VF ,,,,,
+National Semiconductor,32000,NS32FV100VF-20 ,,,,,
+National Semiconductor,32000,NS32FV100VF-20NOPB ,,,,,
+National Semiconductor,32000,NS32FV100VF-25 ,,,,,
+National Semiconductor,32000,NS32FV100VF-25NOPB ,,,,,
+National Semiconductor,32000,NS32FV100VF20 ,,,,,
+National Semiconductor,32000,NS32FV100VF25 ,,,,,
+National Semiconductor,32000,NS32FV16 ,,,,,
+National Semiconductor,32000,NS32FV16V20 ,,,,,
+National Semiconductor,32000,NS32FV16V25 ,,,,,
+National Semiconductor,32000,NS32FX100 ,,,,,
+National Semiconductor,32000,NS32FX100-15 ,,,,,
+National Semiconductor,32000,NS32FX100-20 ,,,,,
+National Semiconductor,32000,NS32FX100VF ,,,,,
+National Semiconductor,32000,NS32FX100VF-15 ,,,,,
+National Semiconductor,32000,NS32FX100VF-20 ,,,,,
+National Semiconductor,32000,NS32FX100VF-20NOPB ,,,,,
+National Semiconductor,32000,NS32FX100VF15 ,,,,,
+National Semiconductor,32000,NS32FX100VF20 ,,,,,
+National Semiconductor,32000,NS32FX100VFNOPB ,,,,,
+National Semiconductor,32000,NS32FX16 ,,,,,
+National Semiconductor,32000,NS32FX161 ,,,,,
+National Semiconductor,32000,NS32FX161V15 ,,,,,
+National Semiconductor,32000,NS32FX161V20 ,,,,,
+National Semiconductor,32000,NS32FX161V25 ,,,,,
+National Semiconductor,32000,NS32FX164V20 ,,,,,
+National Semiconductor,32000,NS32FX164V25 ,,,,,
+National Semiconductor,32000,NS32FX16V15 ,,,,,
+National Semiconductor,32000,NS32FX16V20 ,,,,,
+National Semiconductor,32000,NS32FX16V25 ,,,,,
+National Semiconductor,32000,NS32GX32ANU-20,,,,,CPU
+National Semiconductor,4004,1NS4004D,INS4004D,,,,CPU
+National Semiconductor,4004,INS4004J,,,,,CPU
+National Semiconductor,4004,INS4004N,,,,,CPU
+National Semiconductor,8080,INS8080AD,,,,,CPU
+National Semiconductor,8080,INS8080AD-1,,,,,CPU
+National Semiconductor,8080,INS8080AD-2,,,,,CPU
+National Semiconductor,8080,INS8080ADI,,,,,CPU
+National Semiconductor,8080,INS8080ADI-2,,,,,CPU
+National Semiconductor,8080,INS8080ADI/883,,,,,CPU
+National Semiconductor,8080,INS8080AJ,D8080A,,,,CPU
+National Semiconductor,8080,INS8080AJ-1,,,,,CPU
+National Semiconductor,8080,INS8080AJ-2,,,,,CPU
+National Semiconductor,8080,INS8080AN,P8080A,,,,CPU
+National Semiconductor,8080,INS8080AN-1,P8080A-1,,,,CPU
+National Semiconductor,8080,INS8080AN-2,,,,,CPU
+National Semiconductor,Geode GX1,GX1-233B-85-1.8,,,,,CPU
+National Semiconductor,Geode GXLV,GXLV-200P 2.2V 85C,,,,,CPU
+National Semiconductor,Geode GXLV,GXLV-233B 2.5V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-180B 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-180B 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-180P 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-180P 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-200B 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-200B 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-200P 2.9V 60C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-200P 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-233B 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-233B 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-233P 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-233P 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-266B 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-266B 2.9V 85C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-266P 2.9V 70C,,,,,CPU
+National Semiconductor,Geode GXM,GXm-266P 2.9V 85C,,,,,CPU
+National Semiconductor,Geode SC1200,SC1200UCL-266,,,,,CPU
+National Semiconductor,Geode SC1200,SC1200UFH-266,,,,,CPU
+National Semiconductor,Geode SC1200,SC1201UCL-266,,,,,CPU
+National Semiconductor,Geode SC1200,SC1201UFH-266,,,,,CPU
+National Semiconductor,Geode SC2200,SC2200UCL-266,,,,,CPU
+National Semiconductor,Geode SC2200,SC2200UCL-300,,,,,CPU
+National Semiconductor,Geode SC2200,SC2200UFH-233,,,,,CPU
+National Semiconductor,Geode SC2200,SC2200UFH-266,,,,,CPU
+National Semiconductor,Geode SC2200,SC2200UFH-266,,,,,CPU
+National Semiconductor,Geode SC3200,SC3200UCL-266,,,,,CPU
+National Semiconductor,Geode SC3200,SC3200UFH-233,,,,,CPU
+National Semiconductor,Geode SC3200,SC3200UFH-266,,,,,CPU
+National Semiconductor,INS8900,INS8900D,,,,,CPU
+National Semiconductor,NSC800,NSC800D-1,,,,,CPU
+National Semiconductor,NSC800,NSC800D-1,,,,,CPU
+National Semiconductor,NSC800,NSC800D-1/883,,,,,CPU
+National Semiconductor,NSC800,NSC800D-1I,,,,,CPU
+National Semiconductor,NSC800,NSC800D-1M,,,,,CPU
+National Semiconductor,NSC800,NSC800D-3,,,,,CPU
+National Semiconductor,NSC800,NSC800D-35/883,,,,,CPU
+National Semiconductor,NSC800,NSC800D-3I,,,,,CPU
+National Semiconductor,NSC800,NSC800D-3M,,,,,CPU
+National Semiconductor,NSC800,NSC800D-4,,,,,CPU
+National Semiconductor,NSC800,NSC800D-4/883,,,,,CPU
+National Semiconductor,NSC800,NSC800D-4I,,,,,CPU
+National Semiconductor,NSC800,NSC800D-4M,,,,,CPU
+National Semiconductor,NSC800,NSC800D-4MIL,,,,,CPU
+National Semiconductor,NSC800,NSC800D/883,,,,,CPU
+National Semiconductor,NSC800,NSC800E-1,,,,,CPU
+National Semiconductor,NSC800,NSC800E-1/883,,,,,CPU
+National Semiconductor,NSC800,NSC800E-1I,,,,,CPU
+National Semiconductor,NSC800,NSC800E-1M,,,,,CPU
+National Semiconductor,NSC800,NSC800E-3,,,,,CPU
+National Semiconductor,NSC800,NSC800E-35/883,,,,,CPU
+National Semiconductor,NSC800,NSC800E-3I,,,,,CPU
+National Semiconductor,NSC800,NSC800E-4,,,,,CPU
+National Semiconductor,NSC800,NSC800E-4/883,,,,,CPU
+National Semiconductor,NSC800,NSC800E-4I,,,,,CPU
+National Semiconductor,NSC800,NSC800E-4M,,,,,CPU
+National Semiconductor,NSC800,NSC800E/883,,,,,CPU
+National Semiconductor,NSC800,NSC800EM,,,,,CPU
+National Semiconductor,NSC800,NSC800J,,,,,CPU
+National Semiconductor,NSC800,NSC800J-1,,,,,CPU
+National Semiconductor,NSC800,NSC800J-1I,,,,,CPU
+National Semiconductor,NSC800,NSC800J-1M,,,,,CPU
+National Semiconductor,NSC800,NSC800J-4,,,,,CPU
+National Semiconductor,NSC800,NSC800J-4I,,,,,CPU
+National Semiconductor,NSC800,NSC800J-4M,,,,,CPU
+National Semiconductor,NSC800,NSC800JI,,,,,CPU
+National Semiconductor,NSC800,NSC800JM,,,,,CPU
+National Semiconductor,NSC800,NSC800N-1,,,,,CPU
+National Semiconductor,NSC800,NSC800N-1I,,,,,CPU
+National Semiconductor,NSC800,NSC800N-3,,,,,CPU
+National Semiconductor,NSC800,NSC800N-3,,,,,CPU
+National Semiconductor,NSC800,NSC800N-3I,,,,,CPU
+National Semiconductor,NSC800,NSC800N-3I,,,,,CPU
+National Semiconductor,NSC800,NSC800N-4,,,,,CPU
+National Semiconductor,NSC800,NSC800N-4I,,,,,CPU
+National Semiconductor,NSC800,NSC800V-1,,,,,CPU
+National Semiconductor,NSC800,NSC800V-1I,,,,,CPU
+National Semiconductor,NSC800,NSC800V-3,,,,,CPU
+National Semiconductor,NSC800,NSC800V-3I,,,,,CPU
+National Semiconductor,NSC800,NSC800V-4,,,,,CPU
+National Semiconductor,NSC800,NSC800V-4I,,,,,CPU
+National Semiconductor,PACE,IPC-16A/500D,,,,,CPU
+National Semiconductor,PACE,IPC-16A/500D-1,,,,,CPU
+National Semiconductor,PACE,IPC-16A/520D,,,,,CPU
+National Semiconductor,SC/MP II,INS8060D,ISP-8A/600D,,,,CPU
+National Semiconductor,SC/MP II,INS8060N,ISP-8A/600N,,,,CPU
+National Semiconductor,SC/MP III,INS8070D sample,,,,,CPU
+National Semiconductor,SC/MP III,INS8070D,,,,,CPU
+National Semiconductor,SC/MP,,ISP-8A/500D,,,,CPU
 NexGen,Nx586,Nx586-P100,,,,,CPU
 NexGen,Nx586,Nx586-P110,,,,,CPU
 NexGen,Nx586,Nx586-P120,,,,,CPU
@@ -7289,9 +7683,31 @@ Transmeta,TM5600,TM5600-15,,,,,CPU
 Transmeta,TM5600,TM5600-16,,,,,CPU
 Transmeta,TM5600,TM5600-17,,,,,CPU
 VLSI,65C816,VL65C816-04PC,,,,,CPU
+Virata,,GS8120-174-008D,,,,,MCU
+Virata,ARM7,VC45210-PBC80 A2,,,,,MCU
+Virata,ARM7,VC8410-PQC O5,,,,,MCU
 WDC,65C816,W65C816S8P-14,,,,,CPU
 WDC,65C816,W65C816S8PL-14,,,,,CPU
 WDC,65C816,W65C816S8Q-14,,,,,CPU
 Western Electric,32100,WE32100-10,,,,,
 Western Electric,32100,WE32100-14,,,,,
 Western Electric,32100,WE32100-18,,,,,
+Xilinx,PowerPC 405,XC2VP100FF1696,,,,,CPU
+Xilinx,PowerPC 405,XC2VP100FF1704,,,,,CPU
+Xilinx,PowerPC 405,XC2VP20FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP20FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VP2FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP30FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP30FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VP40FF1148,,,,,CPU
+Xilinx,PowerPC 405,XC2VP40FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP4FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1148,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1152,,,,,CPU
+Xilinx,PowerPC 405,XC2VP50FF1517,,,,,CPU
+Xilinx,PowerPC 405,XC2VP70FF1517,,,,,CPU
+Xilinx,PowerPC 405,XC2VP70FF1704,,,,,CPU
+Xilinx,PowerPC 405,XC2VP7FF672,,,,,CPU
+Xilinx,PowerPC 405,XC2VP7FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VPX20FF896,,,,,CPU
+Xilinx,PowerPC 405,XC2VPX70FF1704,,,,,CPU
