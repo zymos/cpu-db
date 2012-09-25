@@ -1,0 +1,210 @@
+CPU families,,MCU families,,DSP families,,BSP families,,ALL
+186,,Z8,,ADSP-2100,,3002,,
+188,,MCS-48,,DSP56800,,2900,,1801
+286,,MCS-51,,dsPIC,,,,1802
+386,,6801/6803,,TMS320,,,,1804
+486,,6802/6808,,,,,,1805
+1802,,6805,,,,,,1806
+2650,,HC05,,,,,,186
+3850,,HC08,,,,,,188
+3870,,HC12,,,,,,2650
+4004,,HC16,,,,,,286
+4040,,Blackfin,,,,,,2900
+6100,,TigerSHARC,,,,,,29100
+6500,,AVR,,,,,,3002
+6800,,AVR32,,,,,,32100
+6809,,MAXQ,,,,,,386
+8008,,HC11,,,,,,3870
+8080,,683xx,,,,,,4004
+8085,,PowerQUICC,,,,,,4040
+8086,,PowerQUICC II,,,,,,486
+8088,,PowerQUICC III,,,,,,486 Overdrive
+29000,,MCS-96,,,,,,5x86
+29100,,MCS-296,,,,,,6100
+29300,,PIC10,,,,,,630x
+65816,,PIC12,,,,,,6500
+68000,,PIC16,,,,,,65C816
+68010,,PIC18,,,,,,6800
+68020,,PIC24,,,,,,68000
+68030,,COP400,,,,,,68008
+68040,,COP8,,,,,,6801/6803
+68060,,720,,,,,,68010
+486 Overdrive,,M16,,,,,,68012
+5x86,,H8,,,,,,6802/6808
+630x,,740,,,,,,68020
+6x86,,ST6,,,,,,68030
+Alpha AXP,,ST7,,,,,,68040
+Celeron D,,ST8,,,,,,6805
+Celeron Dual-Core,,ST10,,,,,,68060
+Celeron M,,ST20,,,,,,68070
+Core 2,,TMS370,,,,,,6809
+Core Duo,,MSP320,,,,,,6x86
+Core Solo,,Z180,,,,,,8008
+Crusoe,,eZ8,,,,,,8080
+Duron,,eZ80,,,,,,8085
+Efficeon,,M32R,,,,,,8086
+Geode NX,,PA-RISC,,,,,,8088
+HyperSPARC,,,,,,,,8X300
+i860,,,,,,,,8X400
+i960,,,,,,,,ADSP-2100
+Itanium,,,,,,,,AM29000
+Itanium 2,,,,,,,,AM29100
+K10 Athlon II,,,,,,,,AM29200
+K10 Athlon II X2,,,,,,,,AM29300
+K10 Athlon II X3,,,,,,,,Alpha AXP
+K10 Athlon II X4,,,,,,,,Athlon MP
+K10 Athlon X2,,,,,,,,Celeron D
+K10 Sempron,,,,,,,,Celeron Dual-Core
+K10 Sempron X2,,,,,,,,Celeron M
+K5,,,,,,,,Core 2
+K6,,,,,,,,Core Duo
+K6-2,,,,,,,,Core Solo
+K6-III,,,,,,,,Crusoe
+K7 Athlon,,,,,,,,Duron
+K7 Athlon 4,,,,,,,,F8
+K7 Athlon MP,,,,,,,,FR
+K7 Athlon Thunderbird,,,,,,,,Geode NX
+K7 Athlon XP,,,,,,,,H8
+K7 Athlon XP-M,,,,,,,,H8/3101
+K7 Sempron,,,,,,,,H8/3102
+K8 Athlon 64,,,,,,,,H8/3103
+K8 Athlon 64 FX,,,,,,,,H8/3292
+K8 Athlon 64 X2,,,,,,,,H8/3294
+K8 Athlon 64 X2,,,,,,,,H8/3296
+K8 Athlon Neo,,,,,,,,H8/3297
+K8 Athlon XP-M,,,,,,,,H8/330
+K8 Opteron,,,,,,,,H8/3522
+K8 Opteron 2nd gen,,,,,,,,H8/534
+K8 Opteron Dual-Core,,,,,,,,H8/536
+K8 Sempron,,,,,,,,HP-RISC
+K8 Sempron 64,,,,,,,,Itanium
+K8 Sempron X2,,,,,,,,Itanium 2
+MC14500B,,,,,,,,K10 Athlon II
+MediaGX,,,,,,,,K10 Athlon II X2
+MII,,,,,,,,K10 Athlon II X3
+Mxi,,,,,,,,K10 Athlon II X4
+Nx586,,,,,,,,K10 Athlon X2
+PDP-11,,,,,,,,K10 Sempron
+Pentium,,,,,,,,K10 Sempron X2
+Pentium 4,,,,,,,,K5
+Pentium D,,,,,,,,K6
+Pentium Dual-Core,,,,,,,,K6-2
+Pentium EE,,,,,,,,K6-III
+Pentium II,,,,,,,,K7 Athlon
+Pentium II Xeon,,,,,,,,K7 Athlon 4
+Pentium III,,,,,,,,K7 Athlon Thunderbird
+Pentium III Xeon,,,,,,,,K7 Athlon XP
+Pentium M,,,,,,,,K7 Athlon XP-M
+Pentium MMX,,,,,,,,K7 Sempron
+Pentium Overdrive,,,,,,,,K8 Athlon 64
+Pentium Pro,,,,,,,,K8 Athlon 64 FX
+Phenom X3,,,,,,,,K8 Athlon 64 X2
+POWER,,,,,,,,K8 Athlon Neo
+POWER3,,,,,,,,K8 Athlon XP-M
+POWER4,,,,,,,,K8 Opteron
+POWER5,,,,,,,,K8 Opteron 2nd gen
+POWER6,,,,,,,,K8 Opteron Dual-Core
+POWER7,,,,,,,,K8 Sempron
+PowerPC 400,,,,,,,,K8 Sempron 64
+PowerPC 600,,,,,,,,K8 Sempron X2
+PowerPC 700,,,,,,,,LR33000
+PowerPC 970,,,,,,,,M16C/6N
+PowerPC G4,,,,,,,,MC14500B
+R10000,,,,,,,,MCS-48 (8035)
+R3000,,,,,,,,MCS-48 (8039)
+R4000,,,,,,,,MCS-48 (8040)
+R4400,,,,,,,,MCS-48 (8042)
+R4600,,,,,,,,MCS-48 (8048)
+R5000,,,,,,,,MCS-48 (8049)
+RS64,,,,,,,,MCS-48 (8050)
+SPARC,,,,,,,,MCS-51 (8031)
+SuperH,,,,,,,,MCS-51 (8032)
+SuperSPARC,,,,,,,,MCS-51 (8051)
+Turion 64,,,,,,,,MCS-51 (8052)
+Turion 64 X2,,,,,,,,MCS-51 (8054)
+Turion Neo X2,,,,,,,,MII
+Turion X2 Ultra,,,,,,,,MP6
+UltraSPARC 3,,,,,,,,MSC-51 (8031)
+UltraSPARC II,,,,,,,,MSC-51 (8051)
+UltraSPARC Iii,,,,,,,,MediaGX
+UltraSPARC T1,,,,,,,,Mxi
+UltraSPARC T2,,,,,,,,Nx586
+V20,,,,,,,,PDP-11
+V30,,,,,,,,PSoC 1
+V40,,,,,,,,PSoC 3
+V50,,,,,,,,PSoC 5
+VIA C7,,,,,,,,Pentium
+VIA Nano,,,,,,,,Pentium 4
+WinChip,,,,,,,,Pentium D
+WinChip 2,,,,,,,,Pentium Dual-Core
+Xscale,,,,,,,,Pentium EE
+Z80,,,,,,,,Pentium II
+Z8000,,,,,,,,Pentium II Overdrive
+,,,,,,,,Pentium II Xeon
+,,,,,,,,Pentium III
+,,,,,,,,Pentium III Xeon
+,,,,,,,,Pentium M
+,,,,,,,,Pentium MMX
+,,,,,,,,Pentium Overdrive
+,,,,,,,,Pentium Pro
+,,,,,,,,Phenom X3
+,,,,,,,,PowerPC 400
+,,,,,,,,PowerPC 600
+,,,,,,,,PowerPC 700
+,,,,,,,,PowerPC 7000
+,,,,,,,,PowerPC 800
+,,,,,,,,R3000
+,,,,,,,,R3500
+,,,,,,,,R4400
+,,,,,,,,R4600
+,,,,,,,,R4700
+,,,,,,,,R5000
+,,,,,,,,SH-1
+,,,,,,,,SH-2
+,,,,,,,,SH-3
+,,,,,,,,SH-4
+,,,,,,,,SPARC
+,,,,,,,,SuperH
+,,,,,,,,T-212
+,,,,,,,,T-222
+,,,,,,,,T-400
+,,,,,,,,T-414
+,,,,,,,,T-425
+,,,,,,,,T-800
+,,,,,,,,T-801
+,,,,,,,,T-805
+,,,,,,,,TLCS-47
+,,,,,,,,TM5600
+,,,,,,,,TMS1000
+,,,,,,,,TMS7000
+,,,,,,,,TMS9900
+,,,,,,,,TMS99105
+,,,,,,,,TMS99110
+,,,,,,,,TMS9980
+,,,,,,,,TMS9995
+,,,,,,,,Turion 64
+,,,,,,,,Turion 64 X2
+,,,,,,,,Turion Neo X2
+,,,,,,,,Turion X2 Ultra
+,,,,,,,,UltraSPARC 3
+,,,,,,,,UltraSPARC I
+,,,,,,,,UltraSPARC II
+,,,,,,,,UltraSPARC III
+,,,,,,,,UltraSPARC IIIi
+,,,,,,,,UltraSPARC IIe
+,,,,,,,,UltraSPARC IIi
+,,,,,,,,UltraSPARC IV
+,,,,,,,,UltraSPARC IV+
+,,,,,,,,UltraSparc I
+,,,,,,,,V20
+,,,,,,,,V25
+,,,,,,,,V30
+,,,,,,,,V40
+,,,,,,,,V50
+,,,,,,,,WinChip
+,,,,,,,,WinChip 2
+,,,,,,,,Z8
+,,,,,,,,Z80
+,,,,,,,,Z8000
+,,,,,,,,i860
+,,,,,,,,i960
