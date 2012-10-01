@@ -1,39 +1,39 @@
-Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
-Matsushita,,MN1527KMB,,,,,MCU
-Matsushita,,MN18801A,,,,,MCU
-Matsushita,,MN1874085T9S,,,,,MCU
-Matsushita,,MN101CF91D,,,,,MCU
-Matsushita,,MN101EF16N,,,,,MCU
-Matsushita,,MN101C01D,,,,,MCU
-Matsushita,,MN101CP01D,,,,,MCU
-Matsushita,,MN101C01C,,,,,MCU
-Matsushita,,MN101C01A,,,,,MCU
-Matsushita,,MN1880024 ,,,,,MCU
-Matsushita,,MN1882424 ,,,,,MCU
-Matsushita,,MN1883224 ,,,,,MCU
-Matsushita,,MN1884824 ,,,,,MCU
-Matsushita,,MN1886428 ,,,,,MCU
-Matsushita,,MN18801,,,,,MCU
-Matsushita,,MN18801A,,,,,MCU
-Matsushita,,MN18802,,,,,MCU
-Matsushita,,MN18802A,,,,,MCU
-Matsushita,,MN18803,,,,,MCU
-Matsushita,,MN18804,,,,,MCU
-Matsushita,,MN18804A,,,,,MCU
-Matsushita,,MN188161,,,,,MCU
-Matsushita,,MN188163,,,,,MCU
-Matsushita,,MN188166,,,,,MCU
-Matsushita,,MN1870877,,,,,MCU
-Matsushita,,MN187123,,,,,MCU
-Matsushita,,MN187124,,,,,MCU
-Matsushita,,MN187125,,,,,MCU
-Matsushita,,MN1871274,,,,,MCU
-Matsushita,,MN1871618,,,,,MCU
-Matsushita,,MN1871675,,,,,MCU
-Matsushita,,MN1871681,,,,,MCU
-Matsushita,,MN187204,,,,,MCU
-Matsushita,,MN1872423,,,,,MCU
-Matsushita,,MN1873223,,,,,MCU
-Matsushita,,MN1873265,,,,,MCU
-Matsushita,,MN18762,,,,,MCU
-Matsushita,,MN18781,,,,,MCU
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Alternative Label 5,Empty,Empty,Empty,Chip Type,Sub-Family,Model number,Core,Core designer,Microarchitecture,Threads,CPUID,Core Count,Architecture,Data Bus (ext),Address Bus,Frequency Min,Frequency Max/Typ,Actual bus frequency,Effective bus frequency,Bus bandwidth,Clock multiplier,Core Stepping,Empty,Empty,Empty,Empty,L1 data cache,L1 data associativity,L1 instruction cache,L1 instruction associativity,L1 unified cache,L1 unified associativity,L2 cache,L2 associativity,L3 cache,L3 associativity,Boot ROM,ROM Internal,ROM Type,RAM internal,RAM max,RAM type,Virtual memory max,Empty,Empty,Empty,Empty,Package,Package Size,Package Weight,Socket,Transistor count,Process Size,Metal Layers,Metal Type,Process technology,Die Size,Empty,Empty,Empty,Empty,Vcc range,Vcc(typ),Empty,Vcc(secondary),Vcc(tertiary),Vcc(core),Vcc(I/O),Power Min,Power Typ,Power Max,Power Thermal Design,Temperature range,Low Power Features,Empty,Empty,Empty,Empty,Empty,Instruction set,Instruction set extensions,Additional instructions,Computer architecture,ISA,Empty,Empty,Empty,Empty,FPU,On-chip peripherals,Features,Empty,Empty,Empty,Empty,Release date,Initial price,Applications,Military Spec,Comments,Empty,Empty,Empty,Empty,Empty,Empty,Reference 1,Reference 2,Reference 3,Reference 4,Reference 5,Reference 6,Reference 7,Reference 8
+Matsushita,,MN1527KMB,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18801A,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1874085T9S,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101CF91D,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101EF16N,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101C01D,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101CP01D,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101C01C,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN101C01A,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1880024 ,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1882424 ,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1883224 ,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1884824 ,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1886428 ,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18801,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18801A,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18802,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18802A,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18803,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18804,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18804A,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN188161,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN188163,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN188166,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1870877,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN187123,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN187124,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN187125,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1871274,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1871618,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1871675,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1871681,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN187204,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1872423,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1873223,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN1873265,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18762,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Matsushita,,MN18781,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
