@@ -1,26 +1,26 @@
-Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Chip Type
-Fujitsu,286,MBL80286-6 ,,,,,CPU
-Fujitsu,286,MBL80286-8 ,,,,,CPU
-Fujitsu,8086,MBL8086-2  ,,,,,CPU
-Fujitsu,8088,MBL8088-2 ,,,,,CPU
-Fujitsu,SPARC,MB86831 ,,,,,CPU
-Fujitsu,SPARC,MB86900 ,,,,,CPU
-Fujitsu,SPARC,MB86902 ,,,,,CPU
-Fujitsu,SPARC,MB86903-40 ,,,,,CPU
-Fujitsu,SPARC,MBCS70301HE  ,,,,,CPU
-Fujitsu,SPARC,SFCB81147C ,,,,,CPU
-Fujitsu,SPARC,SFCB81147FP,,,,,CPU
-Fujitsu,8086,MBL8086-2,,,,,CPU
-Fujitsu,8088,MBL8088-2,,,,,CPU
-Fujitsu,FR,MB91101APMC,,,,,CPU
-Fujitsu,FR,MB91101APF,,,,,CPU
-Fujitsu,FR,MB91101APF-G-JNE1,,,,,CPU
-Fujitsu,8088,MBL8088-1,,,,,CPU
-Fujitsu,8086,MBL8086-1 white ceramic,,,,,CPU
-Fujitsu,8086,MBL8086-2 White ceramic,,,,,CPU
-Fujitsu,8086,MBL8086-2,,,,,CPU
-Fujitsu,MCS-48 (8042),MBL8042H,,,,,MCU
-Fujitsu,MCS-48 (8042),MBL8742H,,,,,MCU
-Fujitsu,MCS-48 (8049),MBL8749H,,,,,MCU
-Fujitsu,186,MBL80186,,,,,CPU
-Fujitsu,SPARC,MB86903-33,,,,,CPU
+Manufacturer,Family,Part #,Alternative Label 1,Alternative Label 2,Alternative Label 3,Alternative Label 4,Alternative Label 5,Empty,Empty,Empty,Chip Type,Sub-Family,Model number,Core,Core designer,Microarchitecture,Threads,CPUID,Core Count,Architecture,Data Bus (ext),Address Bus,Frequency Min,Frequency Max/Typ,Actual bus frequency,Effective bus frequency,Bus bandwidth,Clock multiplier,Core Stepping,Empty,Empty,Empty,Empty,L1 data cache,L1 data associativity,L1 instruction cache,L1 instruction associativity,L1 unified cache,L1 unified associativity,L2 cache,L2 associativity,L3 cache,L3 associativity,Boot ROM,ROM Internal,ROM Type,RAM internal,RAM max,RAM type,Virtual memory max,Empty,Empty,Empty,Empty,Package,Package Size,Package Weight,Socket,Transistor count,Process Size,Metal Layers,Metal Type,Process technology,Die Size,Empty,Empty,Empty,Empty,Vcc range,Vcc(typ),Empty,Vcc(secondary),Vcc(tertiary),Vcc(core),Vcc(I/O),Power Min,Power Typ,Power Max,Power Thermal Design,Temperature range,Low Power Features,Empty,Empty,Empty,Empty,Empty,Instruction set,Instruction set extensions,Additional instructions,Computer architecture,ISA,Empty,Empty,Empty,Empty,FPU,On-chip peripherals,Features,Empty,Empty,Empty,Empty,Release date,Initial price,Applications,Military Spec,Comments,Empty,Empty,Empty,Empty,Empty,Empty,Reference 1,Reference 2,Reference 3,Reference 4,Reference 5,Reference 6,Reference 7,Reference 8
+Fujitsu,286,MBL80286-6 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,286,MBL80286-8 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8086,MBL8086-2  ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8088,MBL8088-2 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MB86831 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MB86900 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MB86902 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MB86903-40 ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MBCS70301HE  ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,SFCB81147C ,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,SFCB81147FP,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8086,MBL8086-2,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8088,MBL8088-2,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,FR,MB91101APMC,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,FR,MB91101APF,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,FR,MB91101APF-G-JNE1,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8088,MBL8088-1,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8086,MBL8086-1 white ceramic,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8086,MBL8086-2 White ceramic,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,8086,MBL8086-2,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,MCS-48 (8042),MBL8042H,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,MCS-48 (8042),MBL8742H,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,MCS-48 (8049),MBL8749H,,,,,,,,,MCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,186,MBL80186,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Fujitsu,SPARC,MB86903-33,,,,,,,,,CPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
