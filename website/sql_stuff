@@ -1,0 +1,107 @@
+CREATE DATABASE db_name;
+
+USE db_name;
+
+SHOW TABLES;
+
+DESCRIBE table_name;
+
+SELECT * FROM [table name];
+
+CREATE TABLE cpu_db_table(manufacturer VARCHAR(64), 
+family VARCHAR(16), part VARCHAR(64), alternative_label_1 VARCHAR(64), 
+alternative_label_2 VARCHAR(64), alternative_label_3 VARCHAR(64), 
+alternative_label_4 VARCHAR(64), alternative_label_5 VARCHAR(64), 
+chip_type VARCHAR(16), sub_family VARCHAR(16), model_number VARCHAR(16), 
+core VARCHAR(16), core_designer VARCHAR(16), microarchitecture VARCHAR(16), 
+threads VARCHAR(16), cpuid VARCHAR(16), core_count VARCHAR(16), 
+architecture VARCHAR(16), data_bus_ext VARCHAR(16), 
+address_bus VARCHAR(16), frequency_min VARCHAR(16), 
+frequency_max_typ VARCHAR(16), actual_bus_frequency VARCHAR(16), 
+effective_bus_frequency VARCHAR(16), bus_bandwidth VARCHAR(16), 
+clock_multiplier VARCHAR(16), core_stepping VARCHAR(16), 
+l1_data_cache VARCHAR(16), l1_data_associativity VARCHAR(16), 
+l1_instruction_cache VARCHAR(16), l1_instruction_associativity VARCHAR(16), 
+l1_unified_cache VARCHAR(16), l1_unified_associativity VARCHAR(16), 
+l2_cache VARCHAR(16), l2_associativity VARCHAR(16), 
+l3_cache VARCHAR(16), l3_associativity VARCHAR(16), 
+boot_rom VARCHAR(16), rom_internal VARCHAR(16), rom_type VARCHAR(16), 
+ram_internal VARCHAR(16), ram_max VARCHAR(16), ram_type VARCHAR(16), 
+virtual_memory_max VARCHAR(16), package VARCHAR(16), 
+package_size VARCHAR(16), package_weight VARCHAR(16), socket VARCHAR(16), 
+transistor_count VARCHAR(16), process_size VARCHAR(16), 
+metal_layers VARCHAR(16), metal_type VARCHAR(16), 
+process_technology VARCHAR(16), die_size VARCHAR(16), 
+vcc_range VARCHAR(16), vcc_typ VARCHAR(16), 
+vcc_secondary VARCHAR(16), vcc_tertiary VARCHAR(16), 
+vcc_core VARCHAR(16), vcc_i_o VARCHAR(16), power_min VARCHAR(16), 
+power_typ VARCHAR(16), power_max VARCHAR(16), 
+power_thermal_design VARCHAR(16), temperature_range VARCHAR(16), 
+low_power_features VARCHAR(16), instruction_set VARCHAR(16), 
+instruction_set_extensions VARCHAR(64), 
+additional_instructions VARCHAR(256), 
+computer_architecture VARCHAR(16), isa VARCHAR(16), fpu VARCHAR(16), 
+on_chip_peripherals VARCHAR(256), features VARCHAR(256), 
+release_date VARCHAR(16), initial_price VARCHAR(16), 
+applications VARCHAR(32), military_spec VARCHAR(16), comments VARCHAR(256), 
+reference_1 VARCHAR(512), reference_2 VARCHAR(512), 
+reference_3 VARCHAR(512), reference_4 VARCHAR(512), 
+reference_5 VARCHAR(512), reference_6 VARCHAR(512), 
+reference_7 VARCHAR(512), reference_8 VARCHAR(512));
+
+mysqlimport --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --columns=a,b,c --ignore-lines=1 --user=root -p men test.csv
+
+mysqlimport --local --columns=manufacturer,\
+family,part,alternative_label_1,\
+alternative_label_2,alternative_label_3,\
+alternative_label_4,alternative_label_5,\
+@x,@x,@x,\
+chip_type,sub_family,model_number,\
+core,core_designer,microarchitecture,\
+threads,cpuid,core_count,\
+architecture,data_bus_ext,\
+address_bus,frequency_min,\
+frequency_max_typ,actual_bus_frequency,\
+effective_bus_frequency,bus_bandwidth,\
+clock_multiplier,core_stepping,\
+@x,@x,@x,@x,\
+l1_data_cache,l1_data_associativity,\
+l1_instruction_cache,l1_instruction_associativity,\
+l1_unified_cache,l1_unified_associativity,\
+l2_cache,l2_associativity,\
+l3_cache,l3_associativity,\
+boot_rom,rom_internal,rom_type,\
+ram_internal,ram_max,ram_type,\
+virtual_memory_max,\
+@x,@x,@x,@x,\
+package,\
+package_size,package_weight,socket,\
+transistor_count,process_size,\
+metal_layers,metal_type,\
+process_technology,die_size,\
+@x,@x,@x,@x,\
+vcc_range,vcc_typ,\
+@x,\
+vcc_secondary,vcc_tertiary,\
+vcc_core,vcc_i_o,power_min,\
+power_typ,power_max,\
+power_thermal_design,temperature_range,\
+low_power_features,\
+@x,@x,@x,@x,@x,\
+instruction_set,\
+instruction_set_extensions,\
+additional_instructions,\
+computer_architecture,isa,\
+@x,@x,@x,@x,\
+fpu,\
+on_chip_peripherals,features,\
+@x,@x,@x,@x,\
+release_date,initial_price,\
+applications,military_spec,comments,\
+@x,@x,@x,@x,@x,@x,\
+reference_1,reference_2,\
+reference_3,reference_4,\
+reference_5,reference_6,\
+reference_7,reference_8 \
+--ignore-lines=1 --delete --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --user=root -p test cpu_db_table.csv
+

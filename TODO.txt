@@ -1,0 +1,19 @@
+TODO List
+
+* Improve website
+	* change to mysql db
+	* make site pretty
+
+* Create script to grab GIT data for website
+	* Requirements
+		* download CSV db
+		* download TODO.txt file
+		* import CSV db to mysql db
+
+* Fill in database
+	* fill in empty info for chips
+	* add more chip
+	* remove any chips that don't really exist
+	* add new manufacturers
+
+
