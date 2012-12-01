@@ -687,6 +687,14 @@ sub display_single_chip_info_g { # page=c
 
 
 	# Polishing
+	
+	# Subsititution
+	$temperature_range =~ s/â€“/-/;
+	$instruction_set =~ s/X86/x86/;
+	$package_size	=~ s/\^2/<sup>2<\/sup>/;
+	$package_size	=~ s/\^3/<sup>3<\/sup>/;
+	$die_size 		=~ s/\^2/<sup>2<\/sup>/;
+
 	# Alternative labels
 	if( $alternative_label_1 eq '?' ){
 		$alt_labels = '?';
