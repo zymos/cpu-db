@@ -1,7 +1,6 @@
 TODO List
 
 * Improve website
-	* change to mysql db
 	* make site pretty
 
 * Create script to grab GIT data for website
@@ -17,3 +16,126 @@ TODO List
 	* add new manufacturers
 
 
+# 		Completion Status
+AMD:					0%
+AMI:					60%
+Analog_Devices:			0%
+CMD:					done
+CSG:					done
+Chips_and_Technology:	done
+Cypress:				0%
+Cyrix:					done
+DEC:					50%
+Fairchild:				done
+Freescale:				done
+Fujitsu:				done
+GTE:					0%
+HP:						0%
+Harris:					done
+Hitachi:				0%
+IBM:					0%
+IDT:					0%
+Inmos:					0%
+Intel:					50%
+Intersil:				done
+LSI_Logic:				done
+MHS:					done
+MMI:					done
+MOS:					done
+Matsushita:				done
+Mitsubishi:				0%
+Mostek:					80%
+Motorola:				30%
+NCR:					0%
+NEC:					0%
+OKI: 					0%
+Philips:				0%
+RCA:					0%
+Raytheon:				0%
+Renesas:				0%
+Ricoh:					0%
+Rise:					0%
+Rockwell:				0%
+Samsung:				0%
+SGS-Thomson:			Done
+SGS:					0%
+STMicroelectronics:		done
+Siemens:				done
+Signetics:				0%
+Sony:					done
+Sun:					0%
+TI:						0%
+Temic:					0%
+Thomson:				done
+Toshiba:				0%
+Transmeta:				0%
+VLSI_Technology:		done
+VLSI_Vision:			done
+VTI:					0%
+Virata:					0%
+WDC:					20%
+Western_Electric:		0%
+Xilinx:					0%
+-----------------------------
+Total:					~35%		
+
+
+# to be added
+ALi
+AT&T
+Atmel
+ARCA ?
+Brecis
+BLX IC Design
+Conexant
+Compaq
+Daewoo
+Evergreen
+Epson
+Ferranti
+Gainberry
+Genius
+Goldstar
+Godson
+HAL Computer
+Hughes
+IIT
+Intergraph
+Kawasaki
+Kingston
+Kyocera
+LGA
+MCY
+MME
+MOSEL
+MPRC ?
+Microsystems International
+Microsoft
+NexGen
+NHE-S
+Nintendo
+NXP
+OPTI
+Panasonic ?
+Pacemips
+Performance Semi
+Pulse
+PLX
+QED
+ROHM
+Sescosem ?
+SGS-Ates
+Sharp
+SLC
+Solid State Scientific
+TDK
+Tesla
+ULSI
+UMC
+VIA
+Weitek
+Winbond
+Xebec
+Xtend
+Yamaha
+ZMD 

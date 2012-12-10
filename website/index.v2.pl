@@ -696,6 +696,14 @@ sub display_single_chip_info_g { # page=c
 	$die_size 		=~ s/\^2/<sup>2<\/sup>/;
 
 	# Alternative labels
+	$alternative_label_1 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_2 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_3 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_4 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_5 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_6 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_7 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$alternative_label_7 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
 	if( $alternative_label_1 eq '?' ){
 		$alt_labels = '?';
 	}elsif( $alternative_label_2 eq '?' ){
