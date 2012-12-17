@@ -17,7 +17,7 @@ use Text::CSV;
 
 $database_location='cpu-db.csv';
 $todo_file_loc_g='TODO.txt';
-$db ="test";
+$db ="cpu_db";
 $table ="cpu_db_table";
 $user = "cpudb_user";
 $pass = "thepasswordforcpudbuser";
@@ -89,7 +89,7 @@ sub get_manuf_list_alphabetical {# page=cat&type=manuf
 sub get_single_chip_info {# page=c
 	my $manuf = $_[0];
 	my $part = $_[1];
-	my $statement = "SELECT family,alternative_label_1,alternative_label_2,alternative_label_3,alternative_label_4,alternative_label_5,chip_type,sub_family,model_number,core,core_designer,microarchitecture,threads,cpuid,core_count,architecture,data_bus_ext,address_bus,frequency_min,frequency_max_typ,actual_bus_frequency,effective_bus_frequency,bus_bandwidth,clock_multiplier,core_stepping,l1_data_cache,l1_data_associativity,l1_instruction_cache,l1_instruction_associativity,l1_unified_cache,l1_unified_associativity,l2_cache,l2_associativity,l3_cache,l3_associativity,boot_rom,rom_internal,rom_type,ram_internal,ram_max,ram_type,virtual_memory_max,package,package_size,package_weight,socket,transistor_count,process_size,metal_layers,metal_type,process_technology,die_size,vcc_range,vcc_typ,vcc_secondary,vcc_tertiary,vcc_core,vcc_i_o,power_min,power_typ,power_max,power_thermal_design,temperature_range,low_power_features,instruction_set,instruction_set_extensions,additional_instructions,computer_architecture,isa,fpu,on_chip_peripherals,features,release_date,initial_price,applications,military_spec,comments,reference_1,reference_2,reference_3,reference_4,reference_5,reference_6,reference_7,reference_8 FROM $table WHERE manufacturer=\'$manuf\' AND part=\'$part\'";
+	my $statement = "SELECT family,alternative_label_1,alternative_label_2,alternative_label_3,alternative_label_4,alternative_label_5,alternative_label_6,chip_type,sub_family,model_number,core,core_designer,microarchitecture,threads,cpuid,core_count,pipeline,multiprocessing,architecture,data_bus_ext,address_bus,frequency_min,frequency_max_typ,actual_bus_frequency,effective_bus_frequency,bus_bandwidth,clock_multiplier,core_stepping,l1_data_cache,l1_data_associativity,l1_instruction_cache,l1_instruction_associativity,l1_unified_cache,l1_unified_associativity,l2_cache,l2_associativity,l3_cache,l3_associativity,boot_rom,rom_internal,rom_type,ram_internal,ram_max,ram_type,virtual_memory_max,package,package_size,package_weight,socket,transistor_count,process_size,metal_layers,metal_type,process_technology,die_size,vcc_range,vcc_typ,vcc_secondary,vcc_tertiary,vcc_core,vcc_i_o,power_min,power_typ,power_max,power_thermal_design,temperature_range,low_power_features,instruction_set,instruction_set_extensions,additional_instructions,computer_architecture,isa,fpu,on_chip_peripherals,features,release_date,initial_price,applications,military_spec,comments,reference_1,reference_2,reference_3,reference_4,reference_5,reference_6,reference_7,reference_8 FROM $table WHERE manufacturer=\'$manuf\' AND part=\'$part\'";
 	my $chip_hash_ref = $dbh->selectrow_hashref($statement);
 	return $chip_hash_ref;
 }
@@ -365,6 +365,7 @@ sub display_single_chip_info_g { # page=c
 	my $alternative_label_3 = $chip->{ 'alternative_label_3' };
 	my $alternative_label_4 = $chip->{ 'alternative_label_4' };
 	my $alternative_label_5 = $chip->{ 'alternative_label_5' };
+	my $alternative_label_6 = $chip->{ 'alternative_label_6' };
 	my $chip_type = $chip->{ 'chip_type' };
 	my $sub_family = $chip->{ 'sub_family' };
 	my $model_number = $chip->{ 'model_number' };
@@ -374,6 +375,8 @@ sub display_single_chip_info_g { # page=c
 	my $threads = $chip->{ 'threads' };
 	my $cpuid = $chip->{ 'cpuid' };
 	my $core_count = $chip->{ 'core_count' };
+	my $pipeline = $chip->{ 'pipeline' };
+	my $multiprocessing = $chip->{ 'multiprocessing' };	
 	my $architecture = $chip->{ 'architecture' };
 	my $data_bus_ext = $chip->{ 'data_bus_ext' };
 	my $address_bus = $chip->{ 'address_bus' };
@@ -465,6 +468,9 @@ sub display_single_chip_info_g { # page=c
 	if( $alternative_label_5 eq '' ){
 		$alternative_label_5='?';
 	}
+	if( $alternative_label_6 eq '' ){
+		$alternative_label_6='?';
+	}
 	if( $chip_type eq '' ){
 		$chip_type='?';
 		$missing_info_level++;
@@ -492,6 +498,12 @@ sub display_single_chip_info_g { # page=c
 	}
 	if( $core_count eq '' ){
 		$core_count='?';
+	}
+	if( $pipeline eq '' ){
+		$pipeline='?';
+	}
+	if( $multiprocessing eq '' ){
+		$multiprocessing='?';
 	}
 	if( $architecture eq '' ){
 		$architecture='?';
@@ -696,14 +708,6 @@ sub display_single_chip_info_g { # page=c
 	$die_size 		=~ s/\^2/<sup>2<\/sup>/;
 
 	# Alternative labels
-	$alternative_label_1 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_2 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_3 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_4 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_5 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_6 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_7 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
-	$alternative_label_7 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
 	if( $alternative_label_1 eq '?' ){
 		$alt_labels = '?';
 	}elsif( $alternative_label_2 eq '?' ){
@@ -714,11 +718,23 @@ sub display_single_chip_info_g { # page=c
 		$alt_labels = "$alternative_label_1, $alternative_label_2, $alternative_label3";
 	}elsif( $alternative_label_5 eq '?' ){
 		$alt_labels = "$alternative_label_1, $alternative_label_2, $alternative_label_3, $alternative_label_4";
-	}else{
+	}elsif( $alternative_label_6 eq '?' ){
 		$alt_labels = "$alternative_label_1, $alternative_label_2, $alternative_label_3, $alternative_label_4, $alternative_label_5";
+	}else{
+		$alt_labels = "$alternative_label_1, $alternative_label_2, $alternative_label_3, $alternative_label_4, $alternative_label_5, $alternative_label_6";
 	}
 
+
 	# References
+	$reference_1 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_2 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_3 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_4 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_5 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_6 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_7 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+	$reference_8 =~ s!(http://[^\s]+)!<a href="$1">$1</a>!gi;
+
 	if( not( $reference_1 || $reference_2 || $reference_3 || $reference_4 || $reference_5 || $reference_6 || $reference_7 || $reference_8) ){
 		$ref_warning = "<p class=\"warning_message\">This page has no references, if you have any please <a href=\"$script_name_g?page=contrib\">add one</a></p>";
 		$refs = "$ref_warning";
@@ -823,6 +839,14 @@ sub display_single_chip_info_g { # page=c
 					<td class='table_param'>Core stepping:</td>
 					<td class='table_value'>$core_stepping</td>
 				</tr>
+				<tr>
+			  		<td class='table_param'>Pipeline:</td>
+					<td class='table_value'>$pipeline</td>
+				</tr>
+				<tr>
+					<td class='table_param'>Multiprocessing:</td>
+					<td class='table_value'>$multiprocessing</td>
+				</tr>
 			</table>
 		</td>
 		</tr>
@@ -878,7 +902,6 @@ sub display_single_chip_info_g { # page=c
 				<tr>
 		  			<td class='table_param_long'>Bus bandwidth:</td>
 					<td class='table_value'>$bus_bandwidth</td>
-
 				</tr>
 			</table>
 		</td>

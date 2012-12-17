@@ -52,6 +52,10 @@ reference_3 VARCHAR(512), reference_4 VARCHAR(512),
 reference_5 VARCHAR(512), reference_6 VARCHAR(512), 
 reference_7 VARCHAR(512), reference_8 VARCHAR(512));
 
+
+GRANT SELECT ON dbname.* TO 'xxxxx'@'localhost';
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON dbname.* TO 'zzzzz'@'localhost'
+
 mysqlimport --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --columns=a,b,c --ignore-lines=1 --user=root -p men test.csv
 
 mysqlimport --local --columns=manufacturer,\
@@ -63,7 +67,7 @@ alternative_label_6,\
 chip_type,sub_family,model_number,\
 core,core_designer,microarchitecture,\
 threads,cpuid,core_count,\
-pipeline, multiprocessing,\
+pipeline,multiprocessing,\
 @x,@x,@x,\
 architecture,data_bus_ext,address_bus,\
 @x,@x,\
