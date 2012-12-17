@@ -12,29 +12,30 @@ TODO List
 * Fill in database
 	* fill in empty info for chips
 	* add more chip
-	* remove any chips that don't really exist
+	* remove any chips that don't really exist, or comment never 
+	  manufactuered
 	* add new manufacturers
 
 
-# 		Completion Status
+# 					Completion Status
 AMD:					0%
 AMI:					60%
-Analog_Devices:			0%
+Analog_Devices:			done
 CMD:					done
 CSG:					done
 Chips_and_Technology:	done
 Cypress:				0%
 Cyrix:					done
-DEC:					50%
+DEC:					done
 Fairchild:				done
 Freescale:				done
 Fujitsu:				done
-GTE:					0%
-HP:						0%
+GTE:					done
+HP:						done
 Harris:					done
-Hitachi:				0%
-IBM:					0%
-IDT:					0%
+Hitachi:				80%
+IBM:					90%
+IDT:					done
 Inmos:					0%
 Intel:					50%
 Intersil:				done
@@ -57,7 +58,7 @@ Ricoh:					0%
 Rise:					0%
 Rockwell:				0%
 Samsung:				0%
-SGS-Thomson:			Done
+SGS-Thomson:			done
 SGS:					0%
 STMicroelectronics:		done
 Siemens:				done
@@ -77,7 +78,7 @@ WDC:					20%
 Western_Electric:		0%
 Xilinx:					0%
 -----------------------------
-Total:					~35%		
+Total:							
 
 
 # to be added
