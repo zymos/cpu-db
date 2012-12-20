@@ -24,7 +24,7 @@ Analog_Devices:			done
 CMD:					done
 CSG:					done
 Chips_and_Technology:	done
-Cypress:				0%
+Cypress:				50%
 Cyrix:					done
 DEC:					done
 Fairchild:				done
@@ -36,7 +36,7 @@ Harris:					done
 Hitachi:				80%
 IBM:					90%
 IDT:					done
-Inmos:					0%
+Inmos:					done
 Intel:					50%
 Intersil:				done
 LSI_Logic:				done
@@ -44,7 +44,7 @@ MHS:					done
 MMI:					done
 MOS:					done
 Matsushita:				done
-Mitsubishi:				0%
+Mitsubishi:				80%
 Mostek:					80%
 Motorola:				30%
 NCR:					0%
