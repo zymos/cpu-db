@@ -15,13 +15,13 @@ Goals:
 Parameters:
 	Manufacturer
 		descriptions:
-		examples:
+		examples: Intel		
 	Family
 		descriptions:
-		examples:
+		examples: 486
 	Part #
 		descriptions:
-		examples:
+		examples: A80486DX-66
 	Alternative Label 1
 		descriptions:
 		examples:
