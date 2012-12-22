@@ -1,4 +1,8 @@
-cpu-db
+cpu-db.info
+
+Access: 
+	View the database at http://cpu-db.info or open the CSV files with your 
+	favorite spreadsheet editor.
 
 Description:
 	A set of tables that describe CPUs, MCUs, and DSPs and their various
@@ -270,3 +274,5 @@ Prefered Units:
 	date format: 13 April 2001
 	
 
+Copying:
+	The DB is Public Domain. You can use it as you wish. 
