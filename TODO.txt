@@ -5,9 +5,9 @@ TODO List
 
 * Create script to grab GIT data for website
 	* Requirements
-		* download CSV db
+		* download CSV db			(done)
 		* download TODO.txt file
-		* import CSV db to mysql db
+		* import CSV db to mysql db (done)
 
 * Fill in database
 	* fill in empty info for chips
@@ -16,9 +16,12 @@ TODO List
 	  manufactuered
 	* add new manufacturers
 
+* finish  Soviet-Western-Analogs db
+	* cpu-db.supplemetal.Soviet-Western-Analogs.csv
+
 
 # 					Completion Status
-AMD:					0%
+AMD:					10%
 AMI:					60%
 Analog_Devices:			done
 CMD:					done
@@ -47,14 +50,16 @@ Matsushita:				done
 Mitsubishi:				80%
 Mostek:					80%
 Motorola:				30%
+MMI:					?
+Nintendo:				done
 NCR:					0%
 NEC:					0%
-OKI: 					0%
-Philips:				0%
-RCA:					0%
+OKI: 					50%
+Philips:				done
+RCA:					done
 Raytheon:				0%
 Renesas:				0%
-Ricoh:					0%
+Ricoh:					done
 Rise:					0%
 Rockwell:				0%
 Samsung:				0%
@@ -68,29 +73,49 @@ Sun:					0%
 TI:						0%
 Temic:					0%
 Thomson:				done
-Toshiba:				0%
-Transmeta:				0%
+Toshiba:				done
+Transmeta:				done
 VLSI_Technology:		done
 VLSI_Vision:			done
-VTI:					0%
-Virata:					0%
+VTI:					done
+Virata:					done
 WDC:					20%
 Western_Electric:		0%
 Xilinx:					0%
+Zilog:					90%
 -----------------------------
 Total:							
 
 
-# to be added
+
+# To be Added
+
+# Families
+AMD
+	am186cu
+	am186ch
+	am186cc
+	Élan SC520
+	ELAN SC400
+
+
+# Manufacturers
 ALi
 AT&T
 Atmel
 ARCA ?
+Angstrem (USSR)
+Alfa (USSR)
 Brecis
 BLX IC Design
 Conexant
 Compaq
 Daewoo
+Deviz (USSR)
+Electronica (USSR)
+Electronpribor (USSR)
+Eldag (USSR)
+Elcor (USSR)
 Evergreen
 Epson
 Ferranti
@@ -100,21 +125,26 @@ Goldstar
 Godson
 HAL Computer
 Hughes
+Integral (USSR)
 IIT
 Intergraph
 Kawasaki
 Kingston
 Kyocera
+Kvantor (USSR)
+Kvazar (USSR)
 LGA
 MCY
+Micron (USSR)
+Mion (USSR)?
 MME
 MOSEL
 MPRC ?
 Microsystems International
 Microsoft
 NexGen
+NZPP (USSR)
 NHE-S
-Nintendo
 NXP
 OPTI
 Panasonic ?
@@ -122,18 +152,25 @@ Pacemips
 Performance Semi
 Pulse
 PLX
+Pravetz (USSR)
 QED
 ROHM
+Rodon (USSR)
+Svetlana (USSR)
 Sescosem ?
 SGS-Ates
 Sharp
 SLC
 Solid State Scientific
+SEMZ (USSR)
 TDK
 Tesla
+Transistor (USSR)
 ULSI
 UMC
+Unitra CEMI (USSR)
 VIA
+Vostok (USSR)
 Weitek
 Winbond
 Xebec
