@@ -60,7 +60,7 @@ RCA:					done
 Raytheon:				0%
 Renesas:				0%
 Ricoh:					done
-Rise:					0%
+Rise:					done
 Rockwell:				0%
 Samsung:				0%
 SGS-Thomson:			done
