@@ -8,112 +8,166 @@ DESCRIBE table_name;
 
 SELECT * FROM [table name];
 
-CREATE TABLE cpu_db_table(manufacturer VARCHAR(64), 
-family VARCHAR(16), part VARCHAR(64), alternative_label_1 VARCHAR(64), 
-alternative_label_2 VARCHAR(64), alternative_label_3 VARCHAR(64), 
-alternative_label_4 VARCHAR(64), alternative_label_5 VARCHAR(64), 
-alternative_label_6 VARCHAR(64), 
-chip_type VARCHAR(16), sub_family VARCHAR(16), model_number VARCHAR(16), 
-core VARCHAR(16), core_designer VARCHAR(16), microarchitecture VARCHAR(16), 
-threads VARCHAR(16), cpuid VARCHAR(16), core_count VARCHAR(16), 
-pipeline VARCHAR(16), multiprocessing VARCHAR(16),
-architecture VARCHAR(16), data_bus_ext VARCHAR(16), 
-address_bus VARCHAR(16), frequency_min VARCHAR(16), 
-frequency_max_typ VARCHAR(16), actual_bus_frequency VARCHAR(16), 
-effective_bus_frequency VARCHAR(16), bus_bandwidth VARCHAR(16), 
-clock_multiplier VARCHAR(16), core_stepping VARCHAR(16), 
-l1_data_cache VARCHAR(32), l1_data_associativity VARCHAR(32), 
-l1_instruction_cache VARCHAR(32), l1_instruction_associativity VARCHAR(32), 
-l1_unified_cache VARCHAR(32), l1_unified_associativity VARCHAR(32), 
-l2_cache VARCHAR(32), l2_associativity VARCHAR(32), 
-l3_cache VARCHAR(32), l3_associativity VARCHAR(32), 
-boot_rom VARCHAR(16), rom_internal VARCHAR(16), rom_type VARCHAR(16), 
-ram_internal VARCHAR(16), ram_max VARCHAR(16), ram_type VARCHAR(16), 
-virtual_memory_max VARCHAR(16), package VARCHAR(32), 
-package_size VARCHAR(16), package_weight VARCHAR(16), socket VARCHAR(16), 
-transistor_count VARCHAR(16), process_size VARCHAR(16), 
-metal_layers VARCHAR(16), metal_type VARCHAR(16), 
-process_technology VARCHAR(32), die_size VARCHAR(16), 
-vcc_range VARCHAR(16), vcc_typ VARCHAR(16), 
-vcc_secondary VARCHAR(16), vcc_tertiary VARCHAR(16), 
-vcc_core VARCHAR(16), vcc_i_o VARCHAR(16), power_min VARCHAR(16), 
-power_typ VARCHAR(16), power_max VARCHAR(16), 
-power_thermal_design VARCHAR(16), temperature_range VARCHAR(16), 
-temperature_grade VARCHAR(16),
-low_power_features VARCHAR(256), instruction_set VARCHAR(16), 
-instruction_set_extensions VARCHAR(64), 
+
+
+CREATE TABLE cpu_db_table(manufacturer VARCHAR(128), 
+family VARCHAR(32), part VARCHAR(128), alternative_label_1 VARCHAR(128), 
+alternative_label_2 VARCHAR(128), alternative_label_3 VARCHAR(128), 
+alternative_label_4 VARCHAR(128), alternative_label_5 VARCHAR(128), 
+alternative_label_6 VARCHAR(128), 
+chip_type VARCHAR(32), sub_family VARCHAR(32), model_number VARCHAR(32), 
+core VARCHAR(32), core_designer VARCHAR(32), microarchitecture VARCHAR(32), 
+threads VARCHAR(32), cpuid VARCHAR(32), core_count VARCHAR(32), 
+pipeline VARCHAR(32), multiprocessing VARCHAR(32),
+architecture VARCHAR(32), data_bus_ext VARCHAR(32), 
+address_bus VARCHAR(32), bus_comments VARCHAR(128), 
+frequency_ext VARCHAR(32), frequency_min VARCHAR(32), 
+frequency_max_typ VARCHAR(32), actual_bus_frequency VARCHAR(32), 
+effective_bus_frequency VARCHAR(32), bus_bandwidth VARCHAR(32), 
+clock_multiplier VARCHAR(32), core_stepping VARCHAR(32), 
+l1_data_cache VARCHAR(64), l1_data_associativity VARCHAR(64), 
+l1_instruction_cache VARCHAR(64), l1_instruction_associativity VARCHAR(64), 
+l1_unified_cache VARCHAR(64), l1_unified_associativity VARCHAR(64), 
+l2_cache VARCHAR(64), l2_associativity VARCHAR(64), 
+l3_cache VARCHAR(64), l3_associativity VARCHAR(64), 
+boot_rom VARCHAR(32), rom_internal VARCHAR(32), rom_type VARCHAR(32), 
+ram_internal VARCHAR(32), ram_max VARCHAR(32), ram_type VARCHAR(32), 
+virtual_memory_max VARCHAR(32), package VARCHAR(64), 
+package_size VARCHAR(32), package_weight VARCHAR(32), socket VARCHAR(32), 
+transistor_count VARCHAR(32), process_size VARCHAR(32), 
+metal_layers VARCHAR(32), metal_type VARCHAR(32), 
+process_technology VARCHAR(64), die_size VARCHAR(32),
+rohs VARCHAR(64),
+vcc_core_range VARCHAR(32), vcc_core_typ VARCHAR(32), 
+vcc_secondary VARCHAR(32), vcc_tertiary VARCHAR(32), 
+vcc_i_o VARCHAR(32), i_o_compatibillity, power_min VARCHAR(32), 
+power_typ VARCHAR(32), power_max VARCHAR(32), 
+power_thermal_design VARCHAR(32), temperature_range VARCHAR(32), 
+temperature_grade VARCHAR(32),
+low_power_features VARCHAR(256), instruction_set VARCHAR(32), 
+instruction_set_extensions VARCHAR(128), 
 additional_instructions VARCHAR(256), 
-computer_architecture VARCHAR(16), isa VARCHAR(16), fpu VARCHAR(16), 
+computer_architecture VARCHAR(32), isa VARCHAR(32), fpu VARCHAR(32), 
 on_chip_peripherals VARCHAR(512), features VARCHAR(256), 
-release_date VARCHAR(16), initial_price VARCHAR(16), 
-applications VARCHAR(32), military_spec VARCHAR(16), comments VARCHAR(512), 
+production_type VARCHAR(64), clone VARCHAR(128),
+release_date VARCHAR(32), initial_price VARCHAR(32), 
+applications VARCHAR(64), military_spec VARCHAR(32), comments VARCHAR(512), 
 reference_1 VARCHAR(512), reference_2 VARCHAR(512), 
 reference_3 VARCHAR(512), reference_4 VARCHAR(512), 
 reference_5 VARCHAR(512), reference_6 VARCHAR(512), 
-reference_7 VARCHAR(512), reference_8 VARCHAR(512));
+reference_7 VARCHAR(512), reference_8 VARCHAR(512),
+photo_front_filename_1 VARCHAR(128), photo_front_copyright_1 VARCHAR(128),
+photo_front_comment_1 VARCHAR(128),
+photo_back_filename_1 VARCHAR(128), photo_back_copyright_1 VARCHAR(128),
+photo_back_comment_1 VARCHAR(128),
+photo_front_filename_2 VARCHAR(128), photo_front_copyright_2 VARCHAR(128),
+photo_front_comment_2 VARCHAR(128),
+photo_back_filename_2 VARCHAR(128), photo_back_copyright_2 VARCHAR(128),
+photo_back_comment_2 VARCHAR(128),
+photo_front_filename_3 VARCHAR(128), photo_front_copyright_3 VARCHAR(128),
+photo_front_comment_3 VARCHAR(128),
+photo_back_filename_3 VARCHAR(128), photo_back_copyright_3 VARCHAR(128),
+photo_back_comment_3 VARCHAR(128),
+photo_front_filename_4 VARCHAR(128), photo_front_copyright_4 VARCHAR(128),
+photo_front_comment_4 VARCHAR(128),
+photo_back_filename_4 VARCHAR(128), photo_back_copyright_4 VARCHAR(128),
+photo_back_comment_4 VARCHAR(128),
+die_photo_filename_1 VARCHAR(128), die_photo_copyright_1 VARCHAR(128),
+die_photo_comment_1 VARCHAR(128));
 
 
 GRANT SELECT ON dbname.* TO 'xxxxx'@'localhost';
-GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON dbname.* TO 'zzzzz'@'localhost'
+GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP ON cpu_db.* TO 'zzzzz'@'localhost'
 
 mysqlimport --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --columns=a,b,c --ignore-lines=1 --user=root -p men test.csv
 
-mysqlimport --local --columns=manufacturer,\
-family,part,alternative_label_1,\
-alternative_label_2,alternative_label_3,\
-alternative_label_4,alternative_label_5,\
+mysqlimport --local --columns=\
+manufacturer,\
+family, part, alternative_label_1,\
+alternative_label_2, alternative_label_3,\
+alternative_label_4, alternative_label_5,\
 alternative_label_6,\
 @x,@x,@x,\
-chip_type,sub_family,model_number,\
-core,core_designer,microarchitecture,\
-threads,cpuid,core_count,\
-pipeline,multiprocessing,\
+chip_type, sub_family, model_number,\
+core, core_designer, microarchitecture,\
+threads, cpuid, core_count,\
+pipeline, multiprocessing,\
 @x,@x,@x,\
-architecture,data_bus_ext,address_bus,\
-@x,@x,\
-frequency_min,\
-frequency_max_typ,actual_bus_frequency,\
-effective_bus_frequency,bus_bandwidth,\
-clock_multiplier,core_stepping,\
+architecture, data_bus_ext,\
+address_bus, bus_comments,\
+frequency_ext, frequency_min,\
+frequency_max_typ, actual_bus_frequency,\
+effective_bus_frequency, bus_bandwidth,\
+clock_multiplier, core_stepping,\
 @x,@x,@x,@x,\
-l1_data_cache,l1_data_associativity,\
-l1_instruction_cache,l1_instruction_associativity,\
-l1_unified_cache,l1_unified_associativity,\
-l2_cache,l2_associativity,\
-l3_cache,l3_associativity,\
-boot_rom,rom_internal,rom_type,\
-ram_internal,ram_max,ram_type,\
+l1_data_cache, l1_data_associativity,\
+l1_instruction_cache, l1_instruction_associativity,\
+l1_unified_cache, l1_unified_associativity,\
+l2_cache, l2_associativity,\
+l3_cache, l3_associativity,\
+boot_rom, rom_internal, rom_type,\
+ram_internal, ram_max, ram_type,\
 virtual_memory_max,\
 @x,@x,@x,@x,\
 package,\
-package_size,package_weight,socket,\
-transistor_count,process_size,\
-metal_layers,metal_type,\
-process_technology,die_size,\
-@x,@x,@x,@x,\
-vcc_range,vcc_typ,\
+package_size, package_weight, socket,\
+transistor_count, process_size,\
+metal_layers, metal_type,\
+process_technology, die_size,\
+rohs,\
+@x,@x,@x,\
+vcc_core_range, vcc_core_typ,\
 @x,\
-vcc_secondary,vcc_tertiary,\
-vcc_core,vcc_i_o,power_min,\
-power_typ,power_max,\
-power_thermal_design,temperature_range,\
+vcc_secondary, vcc_tertiary,\
+@x,\
+vcc_i_o, i_o_compatibillity, power_min,\
+power_typ, power_max,\
+power_thermal_design, temperature_range,\
 temperature_grade,\
 low_power_features,\
 @x,@x,@x,@x,@x,\
 instruction_set,\
 instruction_set_extensions,\
 additional_instructions,\
-computer_architecture,isa,\
+computer_architecture, isa,\
 @x,@x,@x,@x,\
 fpu,\
-on_chip_peripherals,features,\
-@x,@x,@x,@x,\
-release_date,initial_price,\
-applications,military_spec,comments,\
+on_chip_peripherals, features,\
+@x,@x,\
+production_type, clone,\
+release_date, initial_price,\
+applications, military_spec, comments,\
 @x,@x,@x,@x,@x,@x,\
-reference_1,reference_2,\
-reference_3,reference_4,\
-reference_5,reference_6,\
-reference_7,reference_8 \
+reference_1, reference_2,\
+reference_3, reference_4,\
+reference_5, reference_6,\
+reference_7, reference_8,\
+@x,@x,@x,@x,@x,\
+photo_front_filename_1, photo_front_copyright_1,\
+photo_front_comment_1,\
+@x,\
+photo_back_filename_1, photo_back_copyright_1,\
+photo_back_comment_1,\
+@x,\
+photo_front_filename_2, photo_front_copyright_2,\
+photo_front_comment_2,\
+@x,\
+photo_back_filename_2, photo_back_copyright_2,\
+photo_back_comment_2,\
+@x,\
+photo_front_filename_3, photo_front_copyright_3,\
+photo_front_comment_3,\
+@x,\
+photo_back_filename_3, photo_back_copyright_3,\
+photo_back_comment_3,\
+@x,\
+photo_front_filename_4, photo_front_copyright_4,\
+photo_front_comment_4,\
+@x,\
+photo_back_filename_4, photo_back_copyright_4,\
+photo_back_comment_4,\
+@x,\
+die_photo_filename_1, die_photo_copyright_1,\
+die_photo_comment_1 \
 --ignore-lines=1 --delete --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --user=root -p test cpu_db_table.csv
 
