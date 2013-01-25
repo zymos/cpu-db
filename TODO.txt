@@ -71,7 +71,7 @@ Signetics:				0%
 Sony:					done
 Sun:					0%
 TI:						0%
-Temic:					0%
+Temic:					done
 Thomson:				done
 Toshiba:				done
 Transmeta:				done
@@ -135,6 +135,7 @@ Kvantor (USSR)
 Kvazar (USSR)
 LGA
 MCY
+Mullard
 Micron (USSR)
 Mion (USSR)?
 MME

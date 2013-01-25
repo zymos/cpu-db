@@ -89,7 +89,7 @@ sub get_manuf_list_alphabetical {# page=cat&type=manuf
 sub get_single_chip_info {# page=c
 	my $manuf = $_[0];
 	my $part = $_[1];
-	my $statement = "SELECT family,alternative_label_1,alternative_label_2,alternative_label_3,alternative_label_4,alternative_label_5,alternative_label_6,chip_type,sub_family,model_number,core,core_designer,microarchitecture,threads,cpuid,core_count,pipeline,multiprocessing,architecture,data_bus_ext,address_bus,frequency_min,frequency_max_typ,actual_bus_frequency,effective_bus_frequency,bus_bandwidth,clock_multiplier,core_stepping,l1_data_cache,l1_data_associativity,l1_instruction_cache,l1_instruction_associativity,l1_unified_cache,l1_unified_associativity,l2_cache,l2_associativity,l3_cache,l3_associativity,boot_rom,rom_internal,rom_type,ram_internal,ram_max,ram_type,virtual_memory_max,package,package_size,package_weight,socket,transistor_count,process_size,metal_layers,metal_type,process_technology,die_size,vcc_range,vcc_typ,vcc_secondary,vcc_tertiary,vcc_core,vcc_i_o,power_min,power_typ,power_max,power_thermal_design,temperature_range,low_power_features,instruction_set,instruction_set_extensions,additional_instructions,computer_architecture,isa,fpu,on_chip_peripherals,features,release_date,initial_price,applications,military_spec,comments,reference_1,reference_2,reference_3,reference_4,reference_5,reference_6,reference_7,reference_8 FROM $table WHERE manufacturer=\'$manuf\' AND part=\'$part\'";
+	my $statement = "SELECT manufacturer,family,part,alternative_label_1,alternative_label_2,alternative_label_3,alternative_label_4,alternative_label_5,alternative_label_6,chip_type,sub_family,model_number,core,core_designer,microarchitecture,threads,cpuid,core_count,pipeline,multiprocessing,architecture,data_bus_ext,address_bus,bus_comments,frequency_ext,frequency_min,frequency_max_typ,actual_bus_frequency,effective_bus_frequency,bus_bandwidth,clock_multiplier,core_stepping,l1_data_cache,l1_data_associativity,l1_instruction_cache,l1_instruction_associativity,l1_unified_cache,l1_unified_associativity,l2_cache,l2_associativity,l3_cache,l3_associativity,boot_rom,rom_internal,rom_type,ram_internal,ram_max,ram_type,virtual_memory_max,package,package_size,package_weight,socket,transistor_count,process_size,metal_layers,metal_type,process_technology,die_size,rohs,vcc_core_range,vcc_core_typ,vcc_secondary,vcc_tertiary,vcc_i_o,i_o_compatibillity,power_min,power_typ,power_max,power_thermal_design,temperature_range,temperature_grade,low_power_features,instruction_set,instruction_set_extensions,additional_instructions,computer_architecture,isa,fpu,on_chip_peripherals,features,production_type,clone,release_date,initial_price,applications,military_spec,comments,reference_1,reference_2,reference_3,reference_4,reference_5,reference_6,reference_7,reference_8,photo_front_filename_1,photo_front_copyright_1,photo_front_comment_1,photo_back_filename_1,photo_back_copyright_1,photo_back_comment_1,photo_front_filename_2,photo_front_copyright_2,photo_front_comment_2,photo_back_filename_2,photo_back_copyright_2,photo_back_comment_2,photo_front_filename_3,photo_front_copyright_3,photo_front_comment_3,photo_back_filename_3,photo_back_copyright_3,photo_back_comment_3,photo_front_filename_4,photo_front_copyright_4,photo_front_comment_4,photo_back_filename_4,photo_back_copyright_4,photo_back_comment_4,die_photo_filename_1,die_photo_copyright_1,die_photo_comment_1 FROM $table WHERE manufacturer=\'$manuf\' AND part=\'$part\'";
 	my $chip_hash_ref = $dbh->selectrow_hashref($statement);
 	return $chip_hash_ref;
 }
@@ -414,11 +414,10 @@ sub display_single_chip_info_g { # page=c
 	my $metal_type = $chip->{ 'metal_type' };
 	my $process_technology = $chip->{ 'process_technology' };
 	my $die_size = $chip->{ 'die_size' };
-	my $vcc_range = $chip->{ 'vcc_range' };
-	my $vcc_typ = $chip->{ 'vcc_typ' };
+	my $vcc_core_range = $chip->{ 'vcc_core_range' };
+	my $vcc_core_typ = $chip->{ 'vcc_core_typ' };
 	my $vcc_secondary = $chip->{ 'vcc_secondary' };
 	my $vcc_tertiary = $chip->{ 'vcc_tertiary' };
-	my $vcc_core = $chip->{ 'vcc_core' };
 	my $vcc_i_o = $chip->{ 'vcc_i_o' };
 	my $power_min = $chip->{ 'power_min' };
 	my $power_typ = $chip->{ 'power_typ' };
@@ -619,11 +618,11 @@ sub display_single_chip_info_g { # page=c
 	if( $die_size eq '' ){
 		$die_size='?';
 	}
-	if( $vcc_range eq '' ){
-		$vcc_range='?';
+	if( $vcc_core_range eq '' ){
+		$vcc_core_range='?';
 	}
-	if( $vcc_typ eq '' ){
-		$vcc_typ='?';
+	if( $vcc_core_typ eq '' ){
+		$vcc_core_typ='?';
 		$missing_info_level++;
 	}
 	if( $vcc_secondary eq '' ){
@@ -631,9 +630,6 @@ sub display_single_chip_info_g { # page=c
 	}
 	if( $vcc_tertiary eq '' ){
 		$vcc_tertiary='?';
-	}
-	if( $vcc_core eq '' ){
-		$vcc_core='?';
 	}
 	if( $vcc_i_o eq '' ){
 		$vcc_i_o='?';
@@ -1063,15 +1059,11 @@ sub display_single_chip_info_g { # page=c
 			<table width="100%">
 				<tr>
 		  			<td class='table_param'>Supply voltage(typ):</td>
-					<td class='table_value'>$vcc_typ</td>
+					<td class='table_value'>$vcc_core_typ</td>
 				</tr>
 				<tr>
 		  			<td class='table_param'>Suppy voltage range:</td>
-					<td class='table_value'>$vcc_range</td>
-				</tr>
-				<tr>
-		  			<td class='table_param'>Core voltage:</td>
-					<td class='table_value'>$vcc_core</td>	
+					<td class='table_value'>$vcc_core_range</td>
 				</tr>
 				<tr>	
 		  			<td class='table_param'>I/O voltage:</td>
