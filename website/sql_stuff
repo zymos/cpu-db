@@ -143,31 +143,31 @@ reference_3,reference_4,\
 reference_5,reference_6,\
 reference_7,reference_8,\
 @x,@x,@x,@x,@x,\
-photo_front_filename_1,photo_front_copyright_1,\
+photo_front_filename_1,photo_front_source_1,photo_front_copyright_1,\
 photo_front_comment_1,\
 @x,\
-photo_back_filename_1,photo_back_copyright_1,\
+photo_back_filename_1,photo_back_source_1,photo_back_copyright_1,\
 photo_back_comment_1,\
 @x,\
-photo_front_filename_2,photo_front_copyright_2,\
+photo_front_filename_2,photo_front_source_2,photo_front_copyright_2,\
 photo_front_comment_2,\
 @x,\
-photo_back_filename_2,photo_back_copyright_2,\
+photo_back_filename_2,photo_back_source_2,photo_back_copyright_2,\
 photo_back_comment_2,\
 @x,\
-photo_front_filename_3,photo_front_copyright_3,\
+photo_front_filename_3,photo_front_source_3,photo_front_copyright_3,\
 photo_front_comment_3,\
 @x,\
-photo_back_filename_3,photo_back_copyright_3,\
+photo_back_filename_3,photo_back_source_3,photo_back_copyright_3,\
 photo_back_comment_3,\
 @x,\
-photo_front_filename_4,photo_front_copyright_4,\
+photo_front_filename_4,photo_front_source_4,photo_front_copyright_4,\
 photo_front_comment_4,\
 @x,\
-photo_back_filename_4,photo_back_copyright_4,\
+photo_back_filename_4,photo_back_source_4,photo_back_copyright_4,\
 photo_back_comment_4,\
 @x,\
-die_photo_filename_1,die_photo_copyright_1,\
+die_photo_filename_1,die_photo_source_1,die_photo_copyright_1,\
 die_photo_comment_1 \
 --ignore-lines=1 --delete --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --user=root -p cpu_db cpu_db_table.csv
 

@@ -1713,6 +1713,16 @@ sub display_footer {
 	</div>
 	<br />
 	Copyleft cpu-db.info 2012
+	<!-- GoStats JavaScript Based Code -->
+<script type="text/javascript" src="http://gostats.com/js/counter.js"></script>
+<script type="text/javascript">_gos='c4.gostats.com';_goa=378322;
+_got=6;_goi=28;_gol='GoStats stats counter';_GoStatsRun();</script>
+<noscript><a target="_blank" title="GoStats stats counter" 
+href="http://gostats.com"><img alt="GoStats stats counter" 
+src="http://c4.gostats.com/bin/count/a_378322/t_6/i_28/counter.png" 
+style="border-width:0" /></a></noscript><a target="_blank" href="http://c4.gostats.com/click/378322/web-counter/stats-home" 
+style="font: 9px sans-serif" title="GoStats stats counter">stats</a> 
+<br/><!-- End GoStats JavaScript Based Code -->
 </body>
 </html>
 Endhtml
