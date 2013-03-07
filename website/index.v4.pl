@@ -453,33 +453,33 @@ sub display_single_chip_info_g { # page=c
 	my $reference_7 = $chip->{ 'reference_7' };
 	my $reference_8 = $chip->{ 'reference_8' };
 
-	my $photo_front_filename_1 =  $chip->{ '$photo_front_filename_1' }; #new
-	my $photo_front_copyright_1 = $chip->{ '$photo_front_copyright_1' }; #new
-	my $photo_front_comment_1 =   $chip->{ '$photo_front_comment_1' }; #new
-	my $photo_back_filename_1 =   $chip->{ '$photo_back_filename_1' }; #new
-	my $photo_back_copyright_1 =  $chip->{ '$photo_back_copyright_1' }; #new
-	my $photo_back_comment_1 = 		$chip->{ '$photo_back_comment_1' }; #new
-	my $photo_front_filename_2 = 	$chip->{ '$photo_front_filename_2' }; #new
-	my $photo_front_copyright_2 = 	$chip->{ '$photo_front_copyright_2' }; #new
-	my $photo_front_comment_2 = 	$chip->{ '$photo_front_comment_2' }; #new
-	my $photo_back_filename_2 = 	$chip->{ '$photo_back_filename_2' }; #new
-	my $photo_back_copyright_2 = 	$chip->{ '$photo_back_copyright_2' }; #new
-	my $photo_back_comment_2 = 		$chip->{ '$photo_back_comment_2' }; #new
-	my $photo_front_filename_3 = 	$chip->{ '$photo_front_filename_3' }; #new
-	my $photo_front_copyright_3 = 	$chip->{ '$photo_front_copyright_3' }; #new
-	my $photo_front_comment_3 = 	$chip->{ '$photo_front_comment_3' }; #new
-	my $photo_back_filename_3 = 	$chip->{ '$photo_back_filename_3' }; #new
-	my $photo_back_copyright_3 = 	$chip->{ '$photo_back_copyright_3' }; #new
-	my $photo_back_comment_3 = 		$chip->{ '$photo_back_comment_3' }; #new
-	my $photo_front_filename_4 = 	$chip->{ '$photo_front_filename_4' }; #new
-	my $photo_front_copyright_4 = 	$chip->{ '$photo_front_copyright_4' }; #new
-	my $photo_front_comment_4 = 	$chip->{ '$photo_front_comment_4' }; #new
-	my $photo_back_filename_4 = 	$chip->{ '$photo_back_filename_4' }; #new
-	my $photo_back_copyright_4 = 	$chip->{ '$photo_back_copyright_4' }; #new
-	my $photo_back_comment_4 = 		$chip->{ '$photo_back_comment_4' }; #new
-	my $die_photo_filename_1 = 		$chip->{ '$die_photo_filename_1' }; #new
-	my $die_photo_copyright_1 = 	$chip->{ '$die_photo_copyright_1' }; #new
-	my $die_photo_comment_1  = 		$chip->{ '$die_photo_comment_1' }; #new
+	my $photo_front_filename_1 = $chip->{ '$photo_front_filename_1' }; #new
+	my $photo_front_copyright_1=$chip->{ '$photo_front_copyright_1' }; #new
+	my $photo_front_comment_1 =  $chip->{ '$photo_front_comment_1' }; #new
+	my $photo_back_filename_1 =  $chip->{ '$photo_back_filename_1' }; #new
+	my $photo_back_copyright_1 = $chip->{ '$photo_back_copyright_1' }; #new
+	my $photo_back_comment_1 = 	$chip->{ '$photo_back_comment_1' }; #new
+	my $photo_front_filename_2 =$chip->{ '$photo_front_filename_2' }; #new
+	my $photo_front_copyright_2=$chip->{ '$photo_front_copyright_2' }; #new
+	my $photo_front_comment_2 = $chip->{ '$photo_front_comment_2' }; #new
+	my $photo_back_filename_2 = $chip->{ '$photo_back_filename_2' }; #new
+	my $photo_back_copyright_2 =$chip->{ '$photo_back_copyright_2' }; #new
+	my $photo_back_comment_2 = 	$chip->{ '$photo_back_comment_2' }; #new
+	my $photo_front_filename_3 =$chip->{ '$photo_front_filename_3' }; #new
+	my $photo_front_copyright_3=$chip->{ '$photo_front_copyright_3' }; #new
+	my $photo_front_comment_3 = $chip->{ '$photo_front_comment_3' }; #new
+	my $photo_back_filename_3 = $chip->{ '$photo_back_filename_3' }; #new
+	my $photo_back_copyright_3 =$chip->{ '$photo_back_copyright_3' }; #new
+	my $photo_back_comment_3 = 	$chip->{ '$photo_back_comment_3' }; #new
+	my $photo_front_filename_4 =$chip->{ '$photo_front_filename_4' }; #new
+	my $photo_front_copyright_4=$chip->{ '$photo_front_copyright_4' }; #new
+	my $photo_front_comment_4 = $chip->{ '$photo_front_comment_4' }; #new
+	my $photo_back_filename_4 = $chip->{ '$photo_back_filename_4' }; #new
+	my $photo_back_copyright_4 =$chip->{ '$photo_back_copyright_4' }; #new
+	my $photo_back_comment_4 = 	$chip->{ '$photo_back_comment_4' }; #new
+	my $die_photo_filename_1 = 	$chip->{ '$die_photo_filename_1' }; #new
+	my $die_photo_copyright_1 = $chip->{ '$die_photo_copyright_1' }; #new
+	my $die_photo_comment_1  = 	$chip->{ '$die_photo_comment_1' }; #new
 	
 	if( $family eq '' ){
 		$family='?';
@@ -508,10 +508,14 @@ sub display_single_chip_info_g { # page=c
 		$missing_info_level++;
 	}
 	if( $sub_family eq '' ){
-		$sub_family='?';
+		$sub_family_text='';
+	}else{
+		$sub_family_text="</tr><tr>\n\t\t\t<td class='table_param'>Sub-family:</td>\n\t\t\t\t<td class='table_value'>$frequency_ext</td>";
 	}
 	if( $model_number eq '' ){
-		$model_number='?';
+		$model_number_text='';
+	}else{
+		$model_number_text="</tr><tr>\n\t\t\t<td class='table_param'>Model Number:</td>\n\t\t\t\t<td class='table_value'>$model_number</td>";
 	}
 	if( $core eq '' ){
 		$core='?';
@@ -523,7 +527,9 @@ sub display_single_chip_info_g { # page=c
 		$microarchitecture='?';
 	}
 	if( $threads eq '' ){
-		$threads='?';
+		$threads_text = '';
+	}else{
+		$threads_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Threads:</td>\n\t\t\t\t\t<td class='table_value'>$threads</td>\n\t\t\t\t</tr>";
 	}
 	if( $cpuid eq '' ){
 		$cpuid='?';
@@ -546,9 +552,6 @@ sub display_single_chip_info_g { # page=c
 	}
 	if( $address_bus eq '' ){
 		$address_bus='?';
-	}
-	if( $frequency_min eq '' ){
-		$frequency_min='?';
 	}
 	if( $frequency_max_typ eq '' ){
 		$frequency_max_typ='?';
@@ -706,9 +709,6 @@ sub display_single_chip_info_g { # page=c
 	if( $on_chip_peripherals eq '' ){
 		$on_chip_peripherals='?';
 	}
-	if( $features eq '' ){
-		$features='?';
-	}
 	if( $release_date eq '' ){
 		$release_date='?';
 	}
@@ -718,76 +718,212 @@ sub display_single_chip_info_g { # page=c
 	if( $applications eq '' ){
 		$applications='?';
 	}
-	if( $military_spec eq '' ){
-		$military_spec='?';
-	}
-	if( $comments eq '' ){
-		$comments='?';
-	}
 
-	
-	my $ic_photo_top_text = '';
-	if( $photo_front_filename_1 eq '' ){
-
+	if( $i_o_compatibillity eq '' ){
+		$i_o_compatibillity_text='';
 	}else{
+		$i_o_compatibillity_text = "<tr>\n\t\t\t\t\t<td class='table_param'>I/O compatability:</td>\n\t\t\t\t\t<td class='table_value'>$i_o_compatibillity</td>\n\t\t\t\t</tr>";
+	}
+
+	if( $production_type eq '' ){
+		if( $part =~ /[Ss]ample/ ){
+			$production_type_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Production type:</td>\n\t\t\t\t\t<td class='table_value'>Sample</td>\n\t\t\t\t</tr>";
+		}else{
+			$production_type_text ='';
+		}
+	}else{
+		$production_type_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Production type:</td>\n\t\t\t\t\t<td class='table_value'>$production_type</td>\n\t\t\t\t</tr>";
+	}
+
+	if( $clone eq '' ){
+		$clone_text = '';
+	}else{
+		$clone_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Clone:</td>\n\t\t\t\t\t<td class='table_value'>$clone</td>\n\t\t\t\t</tr>";
+	}
+
+	if( $comments eq '' ){
+		$comments_text = '';
+	}else{
+		$comments_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Comments:</td>\n\t\t\t\t\t<td class='table_value'>$comments</td>\n\t\t\t\t</tr>";
+	}
+
+	if( $military_spec eq '' ){
+		$military_spec_text = '';
+	}else{
+		$military_spec_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Millitary specs:</td>\n\t\t\t\t\t<td class='table_value'>$military_spec</td>\n\t\t\t\t</tr>";
+	}
+
+	if( $features eq '' ){
+		$features_text='';
+	}else{
+		$features_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Features:</td>\n\t\t\t\t\t<td class='table_value'>$features</td>\n\t\t\t\t</tr>";
+	}
+
+
+
+	# Photo
+	# $photo_front_filename_1 = 'ic_photo--top--Zilog--Z0800210PSC--(Z8000-CPU).png';
+	# $photo_front_source_1 = 'CPU Grave Yard';
+	# $photo_front_copyright_1 = 'Creative Commons BY-SA 3.0';
+	# $photo_front_comments_1 = '';
+	my $ic_photo_front_text = '';
+	if( $photo_front_filename_1 eq '' ){
+		$ic_photo_front_text =  <<Endhtml;
+					<td style="border: 1px solid black; height: 340px; width:300px;">
+						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
+							<p style="font-size: 16px;">
+							Chip Photo<br />
+							</p><p style="font-size: 12px;">
+							is unavailable.<br /><br />
+							If you have one,<br />
+							please <a href="$script_name_g?page=upload">upload</a> it.
+							</p>
+						</div>
+					</td>
+Endhtml
+	}else{
+		my $source_text = '';
 		my $copyright_text = '';
 		my $comment_text = '';
+		if( $photo_front_source_1 eq '' ){
+			$source_text = '';
+		}else{
+			$source_text = "Source: $photo_front_source_1<br />";
+		}
 		if( $photo_front_copyright_1 eq '' ){
 			$copyright_text = '';
 		}else{
-			$copyright_text = $photo_front_copyright_1;
+			$copyright_text = "Licence: $photo_front_copyright_1<br />";
 		}
 		if( $photo_front_comment_1 eq '' ){
 			$comment_text = '';
 		}else{
-			$comment_text = $photo_front_comment_1;
+			$comment_text = "Comments: $photo_front_comment_1<br />";
 		}
-
-		$ic_photo_top_text =  <<Endhtml;
+		$ic_photo_front_text =  <<Endhtml;
 					<td style="border: 1px solid black; height: 340px; width:300px;">
 						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
 							<img src="http://cpu-db.info/images/photos/sm/$photo_front_filename_1\_sm.jpg" width="300" />
 						</div>
 						<div>
 							<p style="font-size: 12px;">
-							License: $copyright_text<br />
-							Comments: $comment_text
+							$source_text
+							$copyright_text
+							$comment_text
+							</p>
 						</div>
-						</p>
-						</td>
+					</td>
 Endhtml
 	}
 
-
-	$ic_photo_bottom_text =  <<Endhtml;
+	# Back photo
+	# $photo_back_filename_1 = 'ic_photo--top--Zilog--Z0800210PSC--(Z8000-CPU).png';
+	# $photo_back_source_1 = 'CPU Grave Yard';
+	# $photo_back_copyright_1 = 'Creative Commons BY-SA 3.0';
+	# $photo_back_comments_1 = '';
+	my $ic_photo_back_text = '';
+	if( $photo_back_filename_1 eq '' ){
+		$ic_photo_back_text =  <<Endhtml;
 					<td style="border: 1px solid black; height: 340px; width:300px;">
 						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
-							<img src="http://cpu-db.info/images/photos/sm/ic_photo--top--Zilog--Z0800210PSC--(Z8000-CPU).png_sm.jpg" width="300" />
+							<p style="font-size: 16px;">
+							Chip Photo<br />
+							(bottom)<br /><br />
+							</p><p style="font-size: 12px;">
+							is unavailable.<br />
+							If you have one, please <a href="$script_name_g?page=upload">upload</a> one.
+							</p>
+						</div>
+					</td>
+Endhtml
+	}else{
+		my $source_text = '';
+		my $copyright_text = '';
+		my $comment_text = '';
+		if( $photo_back_source_1 eq '' ){
+			$source_text = '';
+		}else{
+			$source_text = "Source: $photo_back_source_1<br />";
+		}
+		if( $photo_back_copyright_1 eq '' ){
+			$copyright_text = '';
+		}else{
+			$copyright_text = "Licence: $photo_back_copyright_1<br />";
+		}
+		if( $photo_back_comment_1 eq '' ){
+			$comment_text = '';
+		}else{
+			$comment_text = "Comments: $photo_back_comment_1<br />";
+		}
+		$ic_photo_back_text =  <<Endhtml;
+					<td style="border: 1px solid black; height: 340px; width:300px;">
+						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
+							<img src="http://cpu-db.info/images/photos/sm/$photo_back_filename_1\_sm.jpg" width="300" />
 						</div>
 						<div>
 							<p style="font-size: 12px;">
-							Source: CPU Grave Yard<br />
-							License: Creative Commons BY-SA 3.0<br />
-							Comments: besfs sfa a sd
+							$source_text
+							$copyright_text
+							$comment_text
+							</p>
 						</div>
-						</p>
-						</td>
+					</td>
 Endhtml
+	}
 
+	# die photo
+	# $photo_die_filename_1 = 'ic_photo--top--Zilog--Z0800210PSC--(Z8000-CPU).png';
+	# $photo_die_source_1 = 'CPU Grave Yard';
+	# $photo_die_copyright_1 = 'Creative Commons BY-SA 3.0';
+	# $photo_die_comments_1 = '';
+	my $ic_photo_die_text = '';
+	if( $photo_die_filename_1 eq '' ){
 		$ic_photo_die_text =  <<Endhtml;
 					<td style="border: 1px solid black; height: 340px; width:300px;">
 						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
-							<img src="http://cpu-db.info/images/photos/sm/ic_photo--top--Zilog--Z0800210PSC--(Z8000-CPU).png_sm.jpg" width="300" />
+							<p style="font-size: 16px;">
+							Die photo<br />
+							</p><p style="font-size: 12px;">
+							is unavailable.<br /><br />
+							If you have one, please <a href="$script_name_g?page=upload">upload</a> one.
+							</p>
+						</div>
+					</td>
+Endhtml
+	}else{
+		my $source_text = '';
+		my $copyright_text = '';
+		my $comment_text = '';
+		if( $photo_die_source_1 eq '' ){
+			$source_text = '';
+		}else{
+			$source_text = "Source: $photo_die_source_1<br />";
+		}
+		if( $photo_die_copyright_1 eq '' ){
+			$copyright_text = '';
+		}else{
+			$copyright_text = "Licence: $photo_die_copyright_1<br />";
+		}
+		if( $photo_die_comment_1 eq '' ){
+			$comment_text = '';
+		}else{
+			$comment_text = "Comments: $photo_die_comment_1<br />";
+		}
+		$ic_photo_die_text =  <<Endhtml;
+					<td style="border: 1px solid black; height: 340px; width:300px;">
+						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
+							<img src="http://cpu-db.info/images/photos/sm/$photo_die_filename_1\_sm.jpg" width="300" />
 						</div>
 						<div>
 							<p style="font-size: 12px;">
-							Source: CPU Grave Yard<br />
-							License: Creative Commons BY-SA 3.0<br />
-							Comments: besfs sfa a sd
+							$source_text
+							$copyright_text
+							$comment_text
+							</p>
 						</div>
-						</p>
-						</td>
+					</td>
 Endhtml
+	}
 
 
 	################
@@ -806,6 +942,8 @@ Endhtml
 
 	$vcc_core_range =~ s/([0-9])-([0-9])/$1 to $2/;
 	$vcc_core_range =~ s/([0-9]) - ([0-9])/$1 to $2/;
+	$vcc_core_range =~ s/([0-9]) – ([0-9])/$1 to $2/;
+	$vcc_core_range =~ s/([0-9])–([0-9])/$1 to $2/;
 	$vcc_core_range =~ s/([0-9])V$/$1 V/;	
 	$vcc_core_typ =~ s/([0-9])V$/$1 V/;
 	$vcc_secondary  =~ s/([0-9])V$/$1 V/;
@@ -826,20 +964,34 @@ Endhtml
 	# Die
 	$package_size	=~ s/mm\^2/ mm<sup>2<\/sup>/;
 	$package_size	=~ s/mm\^3/ mm<sup>3<\/sup>/;
-	$die_size 		=~ s/mm\^2/ mm<sup>2<\/sup>/;
+	$package_size	=~ s/cm\^2/ cm<sup>2<\/sup>/;
+	$package_size	=~ s/cm\^3/ cm<sup>3<\/sup>/;
+	$die_size 		=~ s/mm\^2/ cm<sup>2<\/sup>/;
 	$transistor_count =~ s/([0-9])M$/$1 million/;
 	$transistor_count =~ s/([0-9])k$/$1 thousand/;
 
 	# MHz's
-	$frequency_min =~ s/MHz/ MHz/; $frequency_min =~ s/  / /g;
+	$frequency_min =~ s/MHz/ MHz/;
 	$frequency_min =~ s/kHz/ kHz/; $frequency_min =~ s/  / /g;
-	$frequency_max_typ =~ s/MHz/ MHz/; $frequency_max_typ =~ s/  / /g;
+	$frequency_ext =~ s/MHz/ MHz/;
+	$frequency_ext =~ s/kHz/ kHz/; $frequency_ext =~ s/  / /g;	
+	$frequency_max_typ =~ s/MHz/ MHz/;
 	$frequency_max_typ =~ s/kHz/ kHz/; $frequency_max_typ =~ s/  / /g;
-	$actual_bus_frequency =~ s/MHz/ MHz/; $actual_bus_frequency =~ s/  / /g;
-	$actual_bus_frequency =~ s/kHz/ kHz/; $actual_bus_frequency =~ s/  / /g;
-	$effective_bus_frequency =~ s/MHz/ MHz/; $effective_bus_frequency =~ s/  / /g;
+	$actual_bus_frequency =~ s/MHz/ MHz/;
+	$actual_bus_frequency =~ s/kHz/ kHz/;$actual_bus_frequency =~ s/  / /g;
+	$effective_bus_frequency =~ s/MHz/ MHz/;
 	$effective_bus_frequency =~ s/kHz/ kHz/; $effective_bus_frequency =~ s/  / /g;
 	$bus_bandwidth =~ s/([0-9])([A-Z])iB\/s$/$1 $2iB\/s/;
+	if( $frequency_ext ne '' ){
+		$frequency_ext_text="<tr>\n\t\t\t\t\t<td class='table_param'>Frequency (ext):</td>\n\t\t\t\t\t<td class='table_value'>$frequency_ext</td>\n\t\t\t\t</tr>";
+	}else{
+		$frequency_ext_text="";
+	}
+	if( $frequency_min ne '' ){
+		$frequency_min_text="<tr>\n\t\t\t\t\t<td class='table_param'>Frequency (min):</td>\n\t\t\t\t\t<td class='table_value'>$frequency_min</td>\n\t\t\t\t</tr>";
+	}else{
+		$frequency_min_text="";
+	}
 
 
 	# Data
@@ -869,8 +1021,22 @@ Endhtml
 	$temperature_range =~ s/C/ C/; 
 	$temperature_range =~ s/F/ F/; 
 	$temperature_range =~ s/ - / to /; 
+	$temperature_range =~ s/ – / to /;
+	$temperature_range =~ s/–/ to /;
 	$temperature_range =~ s/0-/0 to /; 
 	$temperature_range =~ s/5-/5 to /; $temperature_range =~ s/  / /g;
+	if( $temperature_grade eq '' ){
+		if( $temperature_range eq '0 to 70 C' ){
+			$temperature_grade='Commercial';
+		}elsif( $temperature_range eq '-40 to 85 C' ){
+			$temperature_grade='Industrial';
+		}elsif( $temperature_range eq '-55 to 125 C' ){
+			$temperature_grade='Millitary';
+		}else{
+			$temperature_grade='?';
+		}
+	}
+
 
 	# buses
 	$architecture =~ s/([0-9])$/$1-bit/;
@@ -913,6 +1079,11 @@ Endhtml
 	}else{
 		$alt_labels = "$alternative_label_1, $alternative_label_2, $alternative_label_3, $alternative_label_4, $alternative_label_5, $alternative_label_6";
 	}
+	if( $alt_labels eq '?' ){
+		$alt_labels='';
+	}else{
+		$alt_labels="</tr><tr>\n\t\t\t<td class='table_param'>Alternative Lables:</td>\n\t\t\t\t<td class='table_value'>$alt_labels</td>";
+	}
 
 
 	# References
@@ -952,15 +1123,13 @@ Endhtml
 			$refs .= "\n<br />$reference_8";
 		}
 	}
-	$refs =~ s/\“/\"/;
-	$refs =~ s/\”/\"/;
 
 
 	# Cache display
 	my $CACHE_TEXT = '';
 
 	$CACHE_TEXT .= <<Endhtml;
-					<table width="100%">
+			<table width="100%">
 Endhtml
 	if( $l1_data_cache eq "none" && $l1_instruction_cache eq "none" && $l1_unified_cache eq "none" && $l2_cache eq "none" && $l3_cache eq "none"){
 		$CACHE_TEXT .= <<Endhtml;
@@ -1047,11 +1216,10 @@ Endhtml
 							</tr>
 Endhtml
 		}
-		$CACHE_TEXT .= <<Endhtml;
-							</tr>
-						</table>
-Endhtml
 	}
+	$CACHE_TEXT .= <<Endhtml;
+		</table>
+Endhtml
 
 	# Missing Info level
 	if( $missing_info_level > 3 ){
@@ -1075,7 +1243,7 @@ Endhtml
 			<td>
 	<table>
 	  <tr>
-	  <td colspan="2">
+	  <td colspan="2" width="700">
 		<table width="100%">
 			<tr>
 				<td class='table_param'>Chip type:</td>
@@ -1083,16 +1251,9 @@ Endhtml
 			</tr><tr>
 				<td class='table_param'>Family:</td>
 				<td class='table_value'>$family</td>
-			</tr><tr>
-				<td class='table_param'>Sub-family:</td>
-				<td class='table_value'>$sub_family</td>
-			</tr><tr>
-				<td class='table_param'>Model Number:</td>
-				<td class='table_value'>$model_number</td>
-			</tr>
-			<tr>
-				<td class='table_param'>Alternative Lables:</td>
-				<td class='table_value'>$alt_labels</td>
+			$sub_family_text
+			$model_number_text
+			$alt_labels_text
 			</tr>		
 		</table><br />
 	  </td>
@@ -1116,10 +1277,7 @@ Endhtml
 					<td class='table_param'>Number of Cores:</td>
 					<td class='table_value'>$core_count</td>
 				</tr>
-				<tr>
-					<td class='table_param'>Threads:</td>
-					<td class='table_value'>$threads</td>
-				</tr>
+				$threads_text
 				<tr>
 			  		<td class='table_param'>CPUID:</td>
 					<td class='table_value'>$cpuid</td>
@@ -1168,14 +1326,12 @@ Endhtml
 		<td class='table_td_blank'></td>
 		<td>
 			<table width="100%">
-				<tr>
-					<td class='table_param_long'>Freqency(min):</td>
-					<td class='table_value'>$frequency_min</td>		
-				</tr>
+				$frequency_min_text
 				<tr>
 		  			<td class='table_param_long'>Frequency(typ):</td>
 					<td class='table_value'>$frequency_max_typ</td>
 				</tr>
+				$frequency_ext_text
 				<tr>
 		  			<td class='table_param_long'>Clock multiplier:</td>
 					<td class='table_value'>$clock_multiplier</td>
@@ -1250,10 +1406,6 @@ Endhtml
 					  			<td class='table_param'>ROM type:</td>
 								<td class='table_value'>$rom_type</td>
 							</tr>
-							<tr>
-					  			<td class='table_param'>Boot ROM:</td>
-								<td class='table_value'>$boot_rom</td>
-							</tr>
 						</table>
 					</td>
 				</tr>
@@ -1321,6 +1473,7 @@ Endhtml
 		  			<td class='table_param'>I/O voltage:</td>
 					<td class='table_value'>$vcc_i_o</td>
 				</tr>
+				$i_o_compatibillity_text	
 				<tr>
 		  			<td class='table_param'>Secondary voltage:</td>
 					<td class='table_value'>$vcc_secondary</td>
@@ -1348,6 +1501,10 @@ Endhtml
 				<tr>	
 		  			<td class='table_param'>Temp range:</td>
 					<td class='table_value'>$temperature_range</td>
+				</tr>
+				<tr>	
+		  			<td class='table_param'>Temp grade:</td>
+					<td class='table_value'>$temperature_grade</td>
 				</tr>
 				<tr>
 		  			<td class='table_param'>Low power features:</td>
@@ -1445,47 +1602,26 @@ Endhtml
 		  			<td class='table_param'>Introduction price:</td>
 					<td class='table_value'>$initial_price</td>
 				</tr>
+				$production_type_text
+				$clone_text
 				<tr>
 		  			<td class='table_param'>Typical application:</td>
 					<td class='table_value'>$applications</td>
 				</tr>
-				<tr>
-		  			<td class='table_param'>Military Specs:</td>
-					<td class='table_value'>$military_spec</td>
-				</tr>
-				<tr>
-		  			<td class='table_param'>Features:</td>
-					<td class='table_value'>$features</td>
-				</tr>
-				<tr>
-		  			<td class='table_param'>Comments:</td>
-					<td class='table_value'>$comments</td>
-				</tr>
+				$military_spec_text
+				$features_text
+				$comments_text
 			</table>
 		</td>
 	</tr>
-	<tr>
-	  	<td colspan="2" class='table_sec'>References</td>
-	</tr>
-	<tr>
-		<td class='table_td_blank'></td>
-		<td>
-			<table width="100%">
-				<tr>
-		  			<td class='table_value'>&oplus; $refs</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	
 	</table>
 			</td>
 			<td style="vertical-align:top;">
 				<table>
 					<tr>
-						$ic_photo_top_text
+						$ic_photo_front_text
 					</tr><tr>
-						$ic_photo_bottom_text
+						$ic_photo_back_text
 					</tr><tr>
 						$ic_photo_die_text
 					</tr>
@@ -1495,9 +1631,39 @@ Endhtml
 			</td>
 		</tr>
 	</table>
+	
+	<table>
+	  <tr>
+	  	<td colspan="2" class='table_sec'>References</td>
+	  </tr>
+	  <tr>
+		<td class='table_td_blank'></td>
+		<td>
+			<table width="100%">
+				<tr>
+		  			<td class='table_value'>&oplus; $refs</td>
+				</tr>
+			</table>
+		</td>
+	  </tr>
+	</table>	
+
 	</div>
 
 Endhtml
+
+	
+	# fix odd chars
+	$html_code =~ s/Î¼/µ/g;
+	$html_code =~ s/â€œ/\"/g;
+	$html_code =~ s/â€/\"/g;
+	$html_code =~ s/â€“/-/g;
+	$html_code =~ s/â€™/\'/g;
+	$html_code =~ s/â€¦/.../g;
+	$html_code =~ s/–/-/g;
+	$html_code =~ s/\“/\"/g;
+	$html_code =~ s/\”/\"/g;
+
 
 	return $html_code;
 }
