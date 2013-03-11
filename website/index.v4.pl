@@ -658,6 +658,8 @@ sub display_single_chip_info_g { # page=c
 	}
 	if( $package_weight eq '' ){
 		$package_weight='?';
+	}else{
+		$package_weight =~ s/g$/ g/;
 	}
 	if( $socket eq '' ){
 		$socket='?';
@@ -1005,14 +1007,19 @@ Endhtml
 
 	# MHz's
 	$frequency_min =~ s/MHz/ MHz/;
+	$frequency_min =~ s/GHz/ GHz/;
 	$frequency_min =~ s/kHz/ kHz/; $frequency_min =~ s/  / /g;
 	$frequency_ext =~ s/MHz/ MHz/;
+	$frequency_ext =~ s/GHz/ GHz/;
 	$frequency_ext =~ s/kHz/ kHz/; $frequency_ext =~ s/  / /g;	
 	$frequency_max_typ =~ s/MHz/ MHz/;
+	$frequency_max_typ =~ s/GHz/ GHz/;
 	$frequency_max_typ =~ s/kHz/ kHz/; $frequency_max_typ =~ s/  / /g;
 	$actual_bus_frequency =~ s/MHz/ MHz/;
+	$actual_bus_frequency =~ s/GHz/ GHz/;
 	$actual_bus_frequency =~ s/kHz/ kHz/;$actual_bus_frequency =~ s/  / /g;
 	$effective_bus_frequency =~ s/MHz/ MHz/;
+	$effective_bus_frequency =~ s/GHz/ GHz/;
 	$effective_bus_frequency =~ s/kHz/ kHz/; $effective_bus_frequency =~ s/  / /g;
 	$bus_bandwidth =~ s/([0-9])([A-Z])iB\/s$/$1 $2iB\/s/;
 
