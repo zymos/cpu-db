@@ -77,6 +77,15 @@ sub load_sql_db {
 	$dbh = DBI->connect("DBI:mysql:$db:$host",$user, $pass);
 }
 
+sub get_chip_count {# page=cat&type=manuf
+	my $col = 'part';
+ 	my $statement = "SELECT $col FROM $table";
+	my $ref = $dbh->prepare($statement);
+    $ref->execute;
+    my $chip_count = $ref->rows;
+	return $chip_count;
+}
+
 sub get_manuf_list_alphabetical {# page=cat&type=manuf
 	my $col = 'manufacturer';
  	my $statement = "SELECT DISTINCT $col FROM $table";
@@ -453,33 +462,50 @@ sub display_single_chip_info_g { # page=c
 	my $reference_7 = $chip->{ 'reference_7' };
 	my $reference_8 = $chip->{ 'reference_8' };
 
-	my $photo_front_filename_1 = $chip->{ '$photo_front_filename_1' }; #new
-	my $photo_front_copyright_1=$chip->{ '$photo_front_copyright_1' }; #new
-	my $photo_front_comment_1 =  $chip->{ '$photo_front_comment_1' }; #new
-	my $photo_back_filename_1 =  $chip->{ '$photo_back_filename_1' }; #new
-	my $photo_back_copyright_1 = $chip->{ '$photo_back_copyright_1' }; #new
-	my $photo_back_comment_1 = 	$chip->{ '$photo_back_comment_1' }; #new
-	my $photo_front_filename_2 =$chip->{ '$photo_front_filename_2' }; #new
-	my $photo_front_copyright_2=$chip->{ '$photo_front_copyright_2' }; #new
-	my $photo_front_comment_2 = $chip->{ '$photo_front_comment_2' }; #new
-	my $photo_back_filename_2 = $chip->{ '$photo_back_filename_2' }; #new
-	my $photo_back_copyright_2 =$chip->{ '$photo_back_copyright_2' }; #new
-	my $photo_back_comment_2 = 	$chip->{ '$photo_back_comment_2' }; #new
-	my $photo_front_filename_3 =$chip->{ '$photo_front_filename_3' }; #new
-	my $photo_front_copyright_3=$chip->{ '$photo_front_copyright_3' }; #new
-	my $photo_front_comment_3 = $chip->{ '$photo_front_comment_3' }; #new
-	my $photo_back_filename_3 = $chip->{ '$photo_back_filename_3' }; #new
-	my $photo_back_copyright_3 =$chip->{ '$photo_back_copyright_3' }; #new
-	my $photo_back_comment_3 = 	$chip->{ '$photo_back_comment_3' }; #new
-	my $photo_front_filename_4 =$chip->{ '$photo_front_filename_4' }; #new
-	my $photo_front_copyright_4=$chip->{ '$photo_front_copyright_4' }; #new
-	my $photo_front_comment_4 = $chip->{ '$photo_front_comment_4' }; #new
-	my $photo_back_filename_4 = $chip->{ '$photo_back_filename_4' }; #new
-	my $photo_back_copyright_4 =$chip->{ '$photo_back_copyright_4' }; #new
-	my $photo_back_comment_4 = 	$chip->{ '$photo_back_comment_4' }; #new
-	my $die_photo_filename_1 = 	$chip->{ '$die_photo_filename_1' }; #new
-	my $die_photo_copyright_1 = $chip->{ '$die_photo_copyright_1' }; #new
-	my $die_photo_comment_1  = 	$chip->{ '$die_photo_comment_1' }; #new
+	my $photo_front_filename_1 = $chip->{ 'photo_front_filename_1' }; #new
+	my $photo_front_source_1= 	 $chip->{ 'photo_front_source_1' }; #new
+	my $photo_front_copyright_1= $chip->{ 'photo_front_copyright_1' }; #new
+	my $photo_front_comment_1 =  $chip->{ 'photo_front_comment_1' }; #new
+
+	my $photo_back_filename_1 =  $chip->{ 'photo_back_filename_1' }; #new
+	my $photo_back_source_1= 	 $chip->{ 'photo_back_source_1' }; #new
+	my $photo_back_copyright_1 = $chip->{ 'photo_back_copyright_1' }; #new
+	my $photo_back_comment_1 = 	 $chip->{ 'photo_back_comment_1' }; #new
+
+	my $photo_front_filename_2 =$chip->{ 'photo_front_filename_2' }; #new
+	my $photo_front_source_2=	$chip->{ 'photo_front_source_2' }; #new
+	my $photo_front_copyright_2=$chip->{ 'photo_front_copyright_2' }; #new
+	my $photo_front_comment_2 = $chip->{ 'photo_front_comment_2' }; #new
+
+	my $photo_back_filename_2 = $chip->{ 'photo_back_filename_2' }; #new
+	my $photo_back_source_2=	$chip->{ 'photo_back_source_2' }; #new
+	my $photo_back_copyright_2 =$chip->{ 'photo_back_copyright_2' }; #new
+	my $photo_back_comment_2 = 	$chip->{ 'photo_back_comment_2' }; #new
+
+	my $photo_front_filename_3 =$chip->{ 'photo_front_filename_3' }; #new
+	my $photo_front_source_3=	$chip->{ 'photo_front_source_3' }; #new
+	my $photo_front_copyright_3=$chip->{ 'photo_front_copyright_3' }; #new
+	my $photo_front_comment_3 = $chip->{ 'photo_front_comment_3' }; #new
+
+	my $photo_back_filename_3 = $chip->{ 'photo_back_filename_3' }; #new
+	my $photo_back_source_3=	$chip->{ 'photo_back_source_3' }; #new
+	my $photo_back_copyright_3 =$chip->{ 'photo_back_copyright_3' }; #new
+	my $photo_back_comment_3 = 	$chip->{ 'photo_back_comment_3' }; #new
+
+	my $photo_front_filename_4 =$chip->{ 'photo_front_filename_4' }; #new
+	my $photo_front_source_4=	$chip->{ 'photo_front_source_4' }; #new
+	my $photo_front_copyright_4=$chip->{ 'photo_front_copyright_4' }; #new
+	my $photo_front_comment_4 = $chip->{ 'photo_front_comment_4' }; #new
+
+	my $photo_back_filename_4 = $chip->{ 'photo_back_filename_4' }; #new
+	my $photo_back_source_4=	$chip->{ 'photo_back_source_4' }; #new
+	my $photo_back_copyright_4 =$chip->{ 'photo_back_copyright_4' }; #new
+	my $photo_back_comment_4 = 	$chip->{ 'photo_back_comment_4' }; #new
+
+	my $die_photo_filename_1 = 	$chip->{ 'die_photo_filename_1' }; #new
+	my $die_photo_source_1 =	$chip->{ 'die_photo_source_1' }; #new
+	my $die_photo_copyright_1 = $chip->{ 'die_photo_copyright_1' }; #new
+	my $die_photo_comment_1  = 	$chip->{ 'die_photo_comment_1' }; #new
 	
 	if( $family eq '' ){
 		$family='?';
@@ -510,7 +536,7 @@ sub display_single_chip_info_g { # page=c
 	if( $sub_family eq '' ){
 		$sub_family_text='';
 	}else{
-		$sub_family_text="</tr><tr>\n\t\t\t<td class='table_param'>Sub-family:</td>\n\t\t\t\t<td class='table_value'>$frequency_ext</td>";
+		$sub_family_text="</tr><tr>\n\t\t\t<td class='table_param'>Sub-family:</td>\n\t\t\t\t<td class='table_value'>$sub_family</td>";
 	}
 	if( $model_number eq '' ){
 		$model_number_text='';
@@ -719,12 +745,14 @@ sub display_single_chip_info_g { # page=c
 		$applications='?';
 	}
 
+	my $i_o_compatibillity_text='';
 	if( $i_o_compatibillity eq '' ){
 		$i_o_compatibillity_text='';
 	}else{
 		$i_o_compatibillity_text = "<tr>\n\t\t\t\t\t<td class='table_param'>I/O compatability:</td>\n\t\t\t\t\t<td class='table_value'>$i_o_compatibillity</td>\n\t\t\t\t</tr>";
 	}
 
+	my $production_type_text ='';
 	if( $production_type eq '' ){
 		if( $part =~ /[Ss]ample/ ){
 			$production_type_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Production type:</td>\n\t\t\t\t\t<td class='table_value'>Sample</td>\n\t\t\t\t</tr>";
@@ -735,24 +763,28 @@ sub display_single_chip_info_g { # page=c
 		$production_type_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Production type:</td>\n\t\t\t\t\t<td class='table_value'>$production_type</td>\n\t\t\t\t</tr>";
 	}
 
+	my $clone_text = '';
 	if( $clone eq '' ){
 		$clone_text = '';
 	}else{
 		$clone_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Clone:</td>\n\t\t\t\t\t<td class='table_value'>$clone</td>\n\t\t\t\t</tr>";
 	}
 
+	my $comments_text = '';
 	if( $comments eq '' ){
 		$comments_text = '';
 	}else{
 		$comments_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Comments:</td>\n\t\t\t\t\t<td class='table_value'>$comments</td>\n\t\t\t\t</tr>";
 	}
 
+	my $military_spec_text = '';
 	if( $military_spec eq '' ){
 		$military_spec_text = '';
 	}else{
 		$military_spec_text = "<tr>\n\t\t\t\t\t<td class='table_param'>Millitary specs:</td>\n\t\t\t\t\t<td class='table_value'>$military_spec</td>\n\t\t\t\t</tr>";
 	}
 
+	my $features_text='';
 	if( $features eq '' ){
 		$features_text='';
 	}else{
@@ -766,6 +798,7 @@ sub display_single_chip_info_g { # page=c
 	# $photo_front_source_1 = 'CPU Grave Yard';
 	# $photo_front_copyright_1 = 'Creative Commons BY-SA 3.0';
 	# $photo_front_comments_1 = '';
+	$html_code .= "$photo_front_filename_1 $photo_front_source_1 $photo_front_copyright_1 $photo_front_comment_1<br /> - $photo_back_filename_1 $photo_back_source_1 $photo_back_copyright_1 $photo_back_comment_1<br />- $die_photo_filename_1 $die_photo_source_1 $die_photo_copyright_1 $die_photo_comment_1  ";
 	my $ic_photo_front_text = '';
 	if( $photo_front_filename_1 eq '' ){
 		$ic_photo_front_text =  <<Endhtml;
@@ -877,7 +910,7 @@ Endhtml
 	# $photo_die_copyright_1 = 'Creative Commons BY-SA 3.0';
 	# $photo_die_comments_1 = '';
 	my $ic_photo_die_text = '';
-	if( $photo_die_filename_1 eq '' ){
+	if( $die_photo_filename_1 eq '' ){
 		$ic_photo_die_text =  <<Endhtml;
 					<td style="border: 1px solid black; height: 340px; width:300px;">
 						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
@@ -894,25 +927,25 @@ Endhtml
 		my $source_text = '';
 		my $copyright_text = '';
 		my $comment_text = '';
-		if( $photo_die_source_1 eq '' ){
+		if( $die_photo_source_1 eq '' ){
 			$source_text = '';
 		}else{
-			$source_text = "Source: $photo_die_source_1<br />";
+			$source_text = "Source: $die_photo_source_1<br />";
 		}
-		if( $photo_die_copyright_1 eq '' ){
+		if( $die_photo_copyright_1 eq '' ){
 			$copyright_text = '';
 		}else{
-			$copyright_text = "Licence: $photo_die_copyright_1<br />";
+			$copyright_text = "Licence: $die_photo_copyright_1<br />";
 		}
-		if( $photo_die_comment_1 eq '' ){
+		if( $die_photo_comment_1 eq '' ){
 			$comment_text = '';
 		}else{
-			$comment_text = "Comments: $photo_die_comment_1<br />";
+			$comment_text = "Comments: $die_photo_comment_1<br />";
 		}
 		$ic_photo_die_text =  <<Endhtml;
 					<td style="border: 1px solid black; height: 340px; width:300px;">
 						<div style="width:300px; height:300px;display:table-cell;vertical-align:middle;">
-							<img src="http://cpu-db.info/images/photos/sm/$photo_die_filename_1\_sm.jpg" width="300" />
+							<img src="http://cpu-db.info/images/photos/sm/$die_photo_filename_1\_sm.jpg" width="300" />
 						</div>
 						<div>
 							<p style="font-size: 12px;">
@@ -982,16 +1015,22 @@ Endhtml
 	$effective_bus_frequency =~ s/MHz/ MHz/;
 	$effective_bus_frequency =~ s/kHz/ kHz/; $effective_bus_frequency =~ s/  / /g;
 	$bus_bandwidth =~ s/([0-9])([A-Z])iB\/s$/$1 $2iB\/s/;
+
+
+	my $frequency_ext_text = '';
 	if( $frequency_ext ne '' ){
 		$frequency_ext_text="<tr>\n\t\t\t\t\t<td class='table_param'>Frequency (ext):</td>\n\t\t\t\t\t<td class='table_value'>$frequency_ext</td>\n\t\t\t\t</tr>";
 	}else{
 		$frequency_ext_text="";
 	}
-	if( $frequency_min ne '' ){
-		$frequency_min_text="<tr>\n\t\t\t\t\t<td class='table_param'>Frequency (min):</td>\n\t\t\t\t\t<td class='table_value'>$frequency_min</td>\n\t\t\t\t</tr>";
+
+	my $bus_comments_text = '';
+	if( $bus_comments ne '' ){
+		$bus_comments_text="<tr>\n\t\t\t\t\t<td class='table_param'>Bus comments:</td>\n\t\t\t\t\t<td class='table_value'>$bus_comments</td>\n\t\t\t\t</tr>";
 	}else{
-		$frequency_min_text="";
+		$bus_comments_text="";
 	}
+
 
 
 	# Data
@@ -1100,27 +1139,27 @@ Endhtml
 		$ref_warning = "<p class=\"warning_message\">This page has no references, if you have any please <a href=\"$script_name_g?page=contrib\">add one</a></p>";
 		$refs = "$ref_warning";
 	}elsif( $reference_1 ){
-		$refs = "$reference_1";
+		$refs = "&oplus; $reference_1";
 		if( $reference_2 ){
-			$refs .= "\n<br />$reference_2";
+			$refs .= "\n<br />&oplus; $reference_2";
 		}
 		if( $reference_3 ){
-			$refs .= "\n<br />$reference_3";
+			$refs .= "\n<br />&oplus; $reference_3";
 		}
 		if( $reference_4 ){
-			$refs .= "\n<br />$reference_4";
+			$refs .= "\n<br />&oplus; $reference_4";
 		}
 		if( $reference_5 ){
-			$refs .= "\n<br />$reference_5";
+			$refs .= "\n<br />&oplus; $reference_5";
 		}
 		if( $reference_6 ){
-			$refs .= "\n<br />$reference_6";
+			$refs .= "\n<br />&oplus; $reference_6";
 		}
 		if( $reference_7 ){
-			$refs .= "\n<br />$reference_7";
+			$refs .= "\n<br />&oplus; $reference_7";
 		}
 		if( $reference_8 ){
-			$refs .= "\n<br />$reference_8";
+			$refs .= "\n<br />&oplus; $reference_8";
 		}
 	}
 
@@ -1316,6 +1355,7 @@ Endhtml
 			  		<td class='table_param'>Address bus:</td>
 					<td class='table_value'>$address_bus</td>
 				</tr>
+				$bus_comments_text
 			</table>
 		</td>
 	</tr>
@@ -1641,7 +1681,7 @@ Endhtml
 		<td>
 			<table width="100%">
 				<tr>
-		  			<td class='table_value'>&oplus; $refs</td>
+		  			<td class='table_value'>$refs</td>
 				</tr>
 			</table>
 		</td>
@@ -2054,6 +2094,7 @@ Endhtml
 sub display_header {
 	my $html_code = '';
 
+	my $chip_count = get_chip_count();
 	$html_code .= "content-type: text/html \n\n"; #HTTP HEADER
 
 	$html_code .= <<Endhtml;
@@ -2068,6 +2109,11 @@ sub display_header {
     	margin: 0 auto;  
 		border: 1px;
     }  
+	#chip_count {
+	    position: absolute;
+    	top: 20px;
+	    right: 20px;
+	}
 	#lists {
     	margin-left: 50px;
 		border: 1px;
@@ -2129,6 +2175,7 @@ sub display_header {
 <body>
 	
 <h1>cpu-db.info</h1>
+<div id="chip_count">$chip_count chips<br />in the db</div>
 
 <a href="http://cpu-db.info">Home</a> | <a href="$script_name_g?page=cat&type=chips">Chips</a> | <a href="$script_name_g?page=cat&type=manuf">Manufacturer</a> | <a href="$script_name_g?page=cat&type=families">Families</a> | <a href="$script_name_g?page=download">Download DB</a> | <a href="$script_name_g?page=contrib">Help Out</a> | <a href="$script_name_g?page=contact">Contact</a> <br /><br />
 
