@@ -4,9 +4,9 @@ USE cpu_db;
 
 SHOW TABLES;
 
-DESCRIBE table_name;
+DESCRIBE cpu_db_table;
 
-SELECT * FROM [table name];
+SELECT * FROM cpu_db_table;
 
 DROP TABLE cpu_db_table;
 
@@ -51,29 +51,38 @@ computer_architecture VARCHAR(64), isa VARCHAR(64), fpu VARCHAR(64),
 on_chip_peripherals VARCHAR(512), features VARCHAR(512), 
 production_type VARCHAR(128), clone VARCHAR(512),
 release_date VARCHAR(64), initial_price VARCHAR(64), 
-applications VARCHAR(128), military_spec VARCHAR(64), comments VARCHAR(512), 
+applications VARCHAR(128), military_spec VARCHAR(64), 
+comments VARCHAR(512), 
 reference_1 VARCHAR(512), reference_2 VARCHAR(512), 
 reference_3 VARCHAR(512), reference_4 VARCHAR(512), 
 reference_5 VARCHAR(512), reference_6 VARCHAR(512), 
 reference_7 VARCHAR(512), reference_8 VARCHAR(512),
-photo_front_filename_1 VARCHAR(512), photo_front_source_1 VARCHAR(512), 
-photo_front_copyright_1 VARCHAR(512),
+photo_front_filename_1 VARCHAR(512), photo_front_creator_1 VARCHAR(512), 
+photo_front_source_1 VARCHAR(512), photo_front_copyright_1 VARCHAR(512),
 photo_front_comment_1 VARCHAR(512),
-photo_back_filename_1 VARCHAR(512), photo_back_source_1 VARCHAR(512), photo_back_copyright_1 VARCHAR(512),
+photo_back_filename_1 VARCHAR(512), photo_back_creator_1 VARCHAR(512), 
+photo_back_source_1 VARCHAR(512), photo_back_copyright_1 VARCHAR(512),
 photo_back_comment_1 VARCHAR(512),
-photo_front_filename_2 VARCHAR(512), photo_front_source_2 VARCHAR(512), photo_front_copyright_2 VARCHAR(512),
+photo_front_filename_2 VARCHAR(512), photo_front_creator_2 VARCHAR(512), 
+photo_front_source_2 VARCHAR(512), photo_front_copyright_2 VARCHAR(512),
 photo_front_comment_2 VARCHAR(512),
-photo_back_filename_2 VARCHAR(512), photo_back_source_2 VARCHAR(512), photo_back_copyright_2 VARCHAR(512),
+photo_back_filename_2 VARCHAR(512), photo_back_creator_2 VARCHAR(512), 
+photo_back_source_2 VARCHAR(512), photo_back_copyright_2 VARCHAR(512),
 photo_back_comment_2 VARCHAR(512),
-photo_front_filename_3 VARCHAR(512), photo_front_source_3 VARCHAR(512), photo_front_copyright_3 VARCHAR(512),
+photo_front_filename_3 VARCHAR(512), photo_front_creator_3 VARCHAR(512), 
+photo_front_source_3 VARCHAR(512), photo_front_copyright_3 VARCHAR(512),
 photo_front_comment_3 VARCHAR(512),
-photo_back_filename_3 VARCHAR(512), photo_back_source_3 VARCHAR(512), photo_back_copyright_3 VARCHAR(512),
+photo_back_filename_3 VARCHAR(512), photo_back_creator_3 VARCHAR(512), 
+photo_back_source_3 VARCHAR(512), photo_back_copyright_3 VARCHAR(512),
 photo_back_comment_3 VARCHAR(512),
-photo_front_filename_4 VARCHAR(512), photo_front_source_4 VARCHAR(512), photo_front_copyright_4 VARCHAR(512),
+photo_front_filename_4 VARCHAR(512), photo_front_creator_4 VARCHAR(512), 
+photo_front_source_4 VARCHAR(512), photo_front_copyright_4 VARCHAR(512),
 photo_front_comment_4 VARCHAR(512),
-photo_back_filename_4 VARCHAR(512), photo_back_source_4 VARCHAR(512), photo_back_copyright_4 VARCHAR(512),
+photo_back_filename_4 VARCHAR(512), photo_back_creator_4 VARCHAR(512), 
+photo_back_source_4 VARCHAR(512), photo_back_copyright_4 VARCHAR(512),
 photo_back_comment_4 VARCHAR(512),
-die_photo_filename_1 VARCHAR(512), die_photo_source_1 VARCHAR(512), die_photo_copyright_1 VARCHAR(512),
+die_photo_filename_1 VARCHAR(512), die_photo_creator_1 VARCHAR(512), 
+die_photo_source_1 VARCHAR(512), die_photo_copyright_1 VARCHAR(512),
 die_photo_comment_1 VARCHAR(512));
 
 
@@ -144,7 +153,7 @@ reference_3,reference_4,\
 reference_5,reference_6,\
 reference_7,reference_8,\
 @x,@x,@x,@x,@x,\
-photo_front_filename_1,photo_front_source_1,photo_front_copyright_1,\
+photo_front_filename_1,photo_front_creator_1,photo_front_source_1,photo_front_copyright_1,\
 photo_front_comment_1,\
 @x,\
 photo_back_filename_1,photo_back_source_1,photo_back_copyright_1,\
