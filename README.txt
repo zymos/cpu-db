@@ -270,7 +270,7 @@ Prefered Units:
 	mm^2, mm^3: square millimeters, cubic millimeters
 	V, W, C: Volts, Watts, degrees Celsius
 	kHz, MHz, GHz: kilo-Hertz, mega-Hertz, giga-Hertz
-	kiB, MiB, GiB: kilobytes, megabytes, gigabytes
+	KiB, MiB, GiB: kilobytes, megabytes, gigabytes
 	MiB/s, GiB/s: megabytes per second, gigabytes per second
 	k, M: thousand, million
 	$: dollors US

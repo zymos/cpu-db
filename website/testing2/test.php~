@@ -1,0 +1,64 @@
+
+<?php
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////
+////    cpu-db.info
+////
+////    Description: PHP version of the code for 
+////    cpu-db.info, based on the origial perl script
+////
+////	File discription: upload images
+////	
+////    Author: ZyMOS
+////    License: GPL v3.0
+////    Date: Sept 2013
+////
+
+/////////////
+// Config
+$file_size = (1024+512) * 1024; // less than 1.5MiB
+$upload_folder = "upload/";
+
+
+////////////
+// code
+include 'globals.php';
+
+$allowedExts = array("gif", "jpeg", "jpg", "png");
+$temp = explode(".", $_FILES["file"]["name"]);
+$extension = end($temp);
+
+
+if ((($_FILES["file"]["type"] == "image/gif")
+|| ($_FILES["file"]["type"] == "image/jpeg")
+|| ($_FILES["file"]["type"] == "image/jpg")
+|| ($_FILES["file"]["type"] == "image/pjpeg") // progressive jpeg
+|| ($_FILES["file"]["type"] == "image/x-png")
+|| ($_FILES["file"]["type"] == "image/png"))
+&& ($_FILES["file"]["size"] < $file_size)
+&& in_array($extension, $allowedExts)){
+	if ($_FILES["file"]["error"] > 0){
+    		echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
+    	}else{
+    		echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+    		echo "Type: " . $_FILES["file"]["type"] . "<br>";
+    		echo "Size: " . round(($_FILES["file"]["size"] / 1024),0) . " kB<br>";
+	    	//echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
+
+    		if (file_exists($upload_folder . $_FILES["file"]["name"])) {
+	      		echo $_FILES["file"]["name"] . " already exists. ";
+	      	}else{
+      			move_uploaded_file($_FILES["file"]["tmp_name"],
+      				$upload_folder . $_FILES["file"]["name"]);
+	      		echo "Stored in: " . $upload_folder . $_FILES["file"]["name"];
+      		}
+    	}
+  }else{
+  	echo "Invalid file";
+  }
+
+
+
+?>
