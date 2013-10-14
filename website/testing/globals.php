@@ -14,7 +14,17 @@
 ////    Date: June 2013
 ////
 
-	$table_cpu_db ="cpu_db_table";
-	$log_file = "cpu-db.log";
+$table_cpu_db ="cpu_db_table";
+$table_cpu_db_images = "cpu_db_image_table";
+$upload_folder = "images/upload/";
+$resize_folder = "images/thumbs/";
+
+$log_file = "cpu-db.log";
+
+$admin_username = "zymos000";
+
+$log_verboseness = "5"; // 5=everything, 4=errors/warnings, 0=nothing
+
+$script_name_g = "";
 
 ?>

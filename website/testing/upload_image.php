@@ -35,8 +35,79 @@ $thumb_size = 300;
 ////////////
 // code
 include 'globals.php';
-include 'login_functions.php'; // login functions
+include 'db_connect2.php';
+// include 'login_functions.php'; // login functions
+include 'log.php'; //append log
 
+
+
+function write_to_db(){
+	global $upload_folder, $final_filename, $resize_folder, $db_handle, $mysqli;
+	
+	$new_filename = $_POST["new_filename"];
+	$manuf = $_POST["manuf"];
+	$part = $_POST["part"];
+	$side = $_POST["side"];
+	$license = $_POST["license"];
+	$author = $_POST["author"];
+	$source = $_POST["source"];
+	$date = $_POST["date"];
+	$comments = $_POST["comments"];
+
+	$file_name = $_FILES["file"]["name"];
+	$file_type = $_FILES["file"]["type"];
+	$file_size = $_FILES["file"]["size"];
+	$file_tmp_name = $_FILES["file"]["tmp_name"];
+
+	$username = $_SESSION['username'];
+	$thumb = "thumb_" . $final_filename;
+
+	$allowedExts = array("gif", "jpeg", "jpg", "png");
+	$temp = explode(".", $_FILES["file"]["name"]);
+	$extension = end($temp);
+
+	list($width, $height, $type, $attr) = getimagesize($upload_folder . $final_filename);
+
+	$image_size = $width . "x" . $height;
+
+	$username = $_SESSION['username'];
+
+	$up_date = date("Y-m-d");
+
+	$query = "INSERT INTO cpu_db_image_table (filename, thumb_filename, manuf, part, side, description, license, author, source, date_created, comments, file_type, file_size, image_size, username, date_uploaded) VALUES(";
+	$query .=  "'" . $final_filename . "', ";
+	$query .=  "'" . $thumb . "', ";
+	$query .= "'" . $_POST["manuf"] . "', ";
+	$query .= "'" . $_POST["part"] . "', ";
+	$query .= "'" . $_POST["side"] . "', ";
+	$query .= "'" . $_POST["new_filename"] . "', ";
+	$query .= "'" . $_POST["license"] . "', ";
+	$query .= "'" . $_POST["author"] . "', ";
+	$query .= "'" . $_POST["source"] . "', ";
+	$query .= "'" . $_POST["date"] . "', ";
+	$query .= "'" . $_POST["comments"] . "', ";
+	$query .= "'" . $_FILES["file"]["type"] . "', ";
+	$query .= "'" . $_FILES["file"]["size"] . "', ";
+	$query .= "'" . $image_size . "', ";
+	$query .= "'" . $username . "', ";
+	$query .= "'" . $up_date;
+	$query .= "')";
+
+	// echo "$query <br />\n";
+
+	$results = array();
+
+	$results = mysql_query( $query, $db_handle);
+	
+	if (!$results) {
+    	echo "Could not execute query: $query\n";
+		log_it("DB Image INSERT: Failed $final_filename");	
+		trigger_error(mysql_error(), E_USER_ERROR);
+	}else{
+		log_it("DB Image INSERT: Success $final_filename");	
+	}
+	
+}
 
 
 
@@ -80,6 +151,7 @@ function print_upload_info($resize_result){
 	}else{
 		$resize_result_text = "<div style=\"color: red;\">Thumbnail creation failed.</div>\n<div>This is a problem with the script and hopefully someone will notice and fix it, sorry for the trouble.</div><br />\n";
 		$resize_img_text = '';
+		log_it("Upload error: thumbnail creation failed");
 	}
 
 	echo <<<Endhtml
@@ -120,6 +192,11 @@ function print_upload_info($resize_result){
 			</table>
 			<br />
 		</div>
+		<div style="border-style: solid; border-width: 1px; padding: 10px;">
+		Now you can add the image to the chips page. Use the filename "$final_filename".  Go to <a href="$script_name_g?page=add_chip">Add Chip</a> to add the image to a new chips page.  To add the image to an existing chip page, find the page, and click <i>(edit)</i><br /><br />
+		We also recomend you upload the image to <a href="http://commons.wikimedia.org/wiki/Special:UploadWizard">Wikimedia Commons</a>, so it can be used on Wikipedia and other sites.<br /><br />
+		</div>
+
 Endhtml;
 
 }
@@ -171,30 +248,32 @@ function create_new_filename(){
 		$new_ext = "png";
 	}
 
-	$final_filename = "$manuf--$part--$side---$new_filename---$date.$new_ext";
-	if( file_exists($upload_folder . $final_filename) ){ 
-		$final_filename = "$manuf--$part--$side---$new_filename---$date--v2.$new_ext";
-		if( file_exists($upload_folder . $final_filename) ){ 
-			$final_filename = "$manuf--$part--$side---$new_filename---$date--v3.$new_ext";
-			if( file_exists($upload_folder . $final_filename) ){ 
-				$final_filename = "$manuf--$part--$side---$new_filename---$date--v4.$new_ext";
-				if( file_exists($upload_folder . $final_filename) ){ 
-					$final_filename = "$manuf--$part--$side---$new_filename---$date--v5.$new_ext";
-					if( file_exists($upload_folder . $final_filename) ){ 
-						$final_filename = "$manuf--$part--$side---$new_filename---$date--v6.$new_ext";
-						if( file_exists($upload_folder . $final_filename) ){ 
-							$final_filename = "$manuf--$part--$side---$new_filename---$date--v7.$new_ext";
-							if( file_exists($upload_folder . $final_filename) ){ 
-								$final_filename = "$manuf--$part--$side---$new_filename---$date--v8.$new_ext";
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 
+	$final_filename = "$manuf--$part--$side---$new_filename---$date.$new_ext";
 	$final_filename = preg_replace ('/[^\p{L}\p{N}-.]/u', '_', $final_filename);
+
+	// if( file_exists($upload_folder . $final_filename) ){ 
+		// $final_filename = "$manuf--$part--$side---$new_filename---$date--v2.$new_ext";
+		// if( file_exists($upload_folder . $final_filename) ){ 
+			// $final_filename = "$manuf--$part--$side---$new_filename---$date--v3.$new_ext";
+			// if( file_exists($upload_folder . $final_filename) ){ 
+				// $final_filename = "$manuf--$part--$side---$new_filename---$date--v4.$new_ext";
+				// if( file_exists($upload_folder . $final_filename) ){ 
+					// $final_filename = "$manuf--$part--$side---$new_filename---$date--v5.$new_ext";
+					// if( file_exists($upload_folder . $final_filename) ){ 
+						// $final_filename = "$manuf--$part--$side---$new_filename---$date--v6.$new_ext";
+						// if( file_exists($upload_folder . $final_filename) ){ 
+							// $final_filename = "$manuf--$part--$side---$new_filename---$date--v7.$new_ext";
+							// if( file_exists($upload_folder . $final_filename) ){ 
+								// $final_filename = "$manuf--$part--$side---$new_filename---$date--v8.$new_ext";
+							// }
+						// }
+					// }
+				// }
+			// }
+		// }
+	// }
+
 	return $final_filename;
 }
 
@@ -206,10 +285,11 @@ function create_new_filename(){
 
 
 function check_it(){
-	global $file_size_limit, $upload_folder, $final_filename;
+	global $file_size_limit, $upload_folder, $final_filename, $mysqli;
 
 	$check_results=true;
 	$error_text = '';
+	$error = '';
 
 	$new_filename = $_POST["new_filename"];
 	$manuf = $_POST["manuf"];
@@ -241,63 +321,73 @@ function check_it(){
 	|| ($file_type == "image/pjpeg") // progressive jpeg
 	|| ($file_type == "image/x-png")
 	|| ($file_type == "image/png"))){
+		$error .= "-file type-";
 		$error_text .= "Invalid file type: $file_type<br />\n";
 		$check_results=false;
 	}
 	if( ! in_array($extension, $allowedExts) ){
+		$error .= "-ext-";
 		$error_text .= "Invalid file extension: $extension<br />\n";
 		$check_results= false ;
 	}
-	if( ! ($width >= 1000 || $height >= 1000 ) ){
-		$error_text .= "File is not 1000px or more: image size is $width x $height<br />\n";
+	if( ! ($width >= 600 || $height >= 600 ) ){
+		$error .= "-<600px-";	
+		$error_text .= "File is not 600px or more: image size is $width x $height<br />\n";
 		$check_results=false;		
 	}
 	if ($file_size > $file_size_limit){
+		$error .= "-file size-";
 		$error_text .= "File is over $file_size_limit Bytes<br />\n";
 		$check_results=false;
 	}
 	if ($_FILES["file"]["error"] > 0){
+		$error .= "-file error-";
    		$error_text .= "File error: Return Code: " . $_FILES["file"]["error"] . "<br />\n";
 		$check_results=false;
 	}
-	if( strlen($new_filename ) < 1 ){
-		$error_text .= "Invalid new_filename : $new_filename <br />\n";
-		$check_results=false;
-	} 
 	if( strlen($manuf ) < 2 ){
+		$error .= "-manuf-";
 		$error_text .= "Invalid manuf : $manuf <br />\n";
 		$check_results=false;
 	} 
 	if( strlen($part ) < 3 ){
+		$error .= "-part-";
 		$error_text .= "Invalid part : $part <br />\n";
 		$check_results=false;
 	} 
 	if( $side === "false" ){
+		$error .= "-side-";
 		$error_text .= "Invalid side : $side <br />\n";
 		$check_results=false;
 	} 
 	if( $license === "false" ){
+		$error .= "-license-";
 		$error_text .= "Invalid license : $license <br />\n";
 		$check_results=false;
 	} 
 	if( strlen($author ) < 3 ){
+		$error .= "-author-";
 		$error_text .= "Invalid author : $author <br />\n";
 		$check_results=false;
 	} 
 	if( strlen($source ) < 4 ){
+		$error .= "-source-";
 		$error_text .= "Invalid source : $source <br />\n";
 		$check_results=false;
 	} 
-	if( ! preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/', $date) ){
+	if( ! ( preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/', $date) || preg_match('/^[0-9]{4}-(0[1-9]|1[0-2])$/', $date) || preg_match('/^[0-9]{4}$/', $date) ) ){
+		$error .= "-date-";
 		$error_text .= "Invalid date format: $date <br />\n";
 		$check_results=false;
 	} 
-	// if(login_check($mysqli) == false) {
-		// $error_text .= "Not logged in.<br />\n";
-		// $check_results=false;
-	// } 
+	if(login_check($mysqli) == false) {
+		$error .= "-login-";
+		$error_text .= "Not logged in.<br />\n";
+		$check_results=false;
+	} 
 	if( file_exists($upload_folder . $final_filename) ){ 
-		$error_text .= "File already exists: " . create_new_filename() . "<br />\n";
+		$error .= "-exists-";
+		$error_text .= "File already exists: " . $final_filename  . "<br />\n";
 		$check_results=false;
 	} 
 
@@ -310,6 +400,7 @@ function check_it(){
 			<br />
 		</div>
 Endhtml;
+	log_it("Upload error: $error");	
 	}
 
 	return $check_results;
@@ -326,6 +417,7 @@ function upload_it(){
 		$success = true;
 	}else{
 		$success = false;
+		log_it("Upload error: move_uploaded_file failed");
 	}
 	
 	return $success;
@@ -544,17 +636,24 @@ function resize_it(){
 
 echo "<h1>Image Upload</h1><br />\n";
 
+// sec_session_start(); // Our custom secure way of starting a php session. 
 $final_filename = create_new_filename();
 $check_results = check_it();
 
-if( $check_results ){
-	$upload_results = upload_it();
-	if( $upload_results ){
-		resize_it();
-		print_upload_info($resize_result);
+if((login_check($mysqli) == true) ){
+	if( $check_results ){
+		$upload_results = upload_it();
+		if( $upload_results ){
+			resize_it();
+			write_to_db();
+			log_it("Upload success: $final_filename");		
+			print_upload_info($resize_result);
+		}
 	}
+}else{
+	echo "not logged in";
+	log_it("Upload failed: not logged in, $final_filename");	
 }
-
 
 // $filename_thumb = resize_it($filename_saved);
 

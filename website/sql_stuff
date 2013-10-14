@@ -1,3 +1,5 @@
+mysql -u root -p
+
 CREATE DATABASE db_name;
 
 USE cpu_db;
@@ -84,6 +86,7 @@ photo_back_comment_4 VARCHAR(512),
 die_photo_filename_1 VARCHAR(512), die_photo_creator_1 VARCHAR(512), 
 die_photo_source_1 VARCHAR(512), die_photo_copyright_1 VARCHAR(512),
 die_photo_comment_1 VARCHAR(512));
+
 
 
 GRANT SELECT ON dbname.* TO 'xxxxx'@'localhost';
@@ -180,4 +183,173 @@ photo_back_comment_4,\
 die_photo_filename_1,die_photo_source_1,die_photo_copyright_1,\
 die_photo_comment_1 \
 --ignore-lines=1 --delete --fields-enclosed-by='"' --fields-terminated-by=',' --lines-terminated-by="\n" --user=root -p cpu_db cpu_db_table.csv
+
+
+
+
+CREATE TABLE cpu_db_image_table(filename VARCHAR(512), thumb_filename VARCHAR(512), manuf VARCHAR(256), part VARCHAR(256), side VARCHAR(32), description VARCHAR(256), license VARCHAR(256), author VARCHAR(256), source VARCHAR(1024), date_created VARCHAR(32), comments VARCHAR(2048), file_type VARCHAR(32), file_size VARCHAR(32), image_size VARCHAR(32), username VARCHAR(256), date_uploaded VARCHAR(32));
+
+
+mysqlimport --local --columns=\
+filename,thumb_filename,manuf,part,side,description,license,\
+author,source,date_created,comments,file_type,file_size,\
+image_size,username,date_uploaded \
+--ignore-lines=1 --delete --fields-enclosed-by='"' \
+--fields-terminated-by=',' --lines-terminated-by="\n" \
+--user=root -p cpu_db cpu_db_image_table.csv
+
+
+
+##################################################################
+##################################################################
+####       Login
+####
+#### http://www.wikihow.com/Create-a-Secure-Login-Script-in-PHP-and-MySQL
+####
+####
+
+
+USE secure_login;
+
+
+CREATE DATABASE `secure_login` ;
+
+
+##################
+# Usernames db
+
+CREATE TABLE `secure_login`.`members` (
+  `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  `username` VARCHAR(30) NOT NULL, 
+  `email` VARCHAR(50) NOT NULL, 
+  `password` CHAR(128) NOT NULL, 
+  `salt` CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+
+
+
+##################
+# login attempts
+
+CREATE TABLE `secure_login`.`login_attempts` (
+  `user_id` int(11) NOT NULL,
+  `time` VARCHAR(30) NOT NULL 
+) ENGINE=InnoDB
+
+
+
+##################
+# Change log
+
+CREATE TABLE `secure_login`.`change_log` (
+  `change_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  
+  `user_id` int(11) NOT NULL,
+  `time` VARCHAR(30) NOT NULL,
+  `manufacturer` VARCHAR(512), 
+  `family` VARCHAR(64), 
+  `part` VARCHAR(512), 
+  `alternative_label_1` VARCHAR(512), 
+  `alternative_label_2` VARCHAR(512), 
+  `alternative_label_3` VARCHAR(512), 
+  `alternative_label_4` VARCHAR(512), 
+  `alternative_label_5` VARCHAR(512), 
+  `alternative_label_6` VARCHAR(512), 
+  `chip_type` VARCHAR(64), 
+  `sub_family` VARCHAR(64), 
+  `model_number` VARCHAR(64), 
+  `core` VARCHAR(64), 
+  `core_designer` VARCHAR(64), 
+  `microarchitecture` VARCHAR(64), 
+  `threads` VARCHAR(64), 
+  `cpuid` VARCHAR(64), 
+  `core_count` VARCHAR(64), 
+  `pipeline` VARCHAR(64), 
+  `multiprocessing` VARCHAR(64),
+  `architecture` VARCHAR(64), 
+  `data_bus_ext` VARCHAR(64), 
+  `address_bus` VARCHAR(64), 
+  `bus_comments` VARCHAR(512), 
+  `frequency_ext` VARCHAR(64), 
+  `frequency_min` VARCHAR(64), 
+  `frequency_max_typ` VARCHAR(64), 
+  `actual_bus_frequency` VARCHAR(64), 
+  `effective_bus_frequency` VARCHAR(64), 
+  `bus_bandwidth` VARCHAR(64), 
+  `clock_multiplier` VARCHAR(64), 
+  `core_stepping` VARCHAR(64), 
+  `l1_data_cache` VARCHAR(128), 
+  `l1_data_associativity` VARCHAR(128), 
+  `l1_instruction_cache` VARCHAR(128), 
+  `l1_instruction_associativity` VARCHAR(128), 
+  `l1_unified_cache` VARCHAR(128), 
+  `l1_unified_associativity` VARCHAR(128), 
+  `l2_cache` VARCHAR(128), 
+  `l2_associativity` VARCHAR(128), 
+  `l3_cache` VARCHAR(128), 
+  `l3_associativity` VARCHAR(128), 
+  `boot_rom` VARCHAR(64), 
+  `rom_internal` VARCHAR(64), 
+  `rom_type` VARCHAR(64), 
+  `ram_internal` VARCHAR(64), 
+  `ram_max` VARCHAR(64), 
+  `ram_type` VARCHAR(64), 
+  `virtual_memory_max` VARCHAR(64), 
+  `package` VARCHAR(128), 
+  `package_size` VARCHAR(64), 
+  `package_weight` VARCHAR(64), 
+  `socket` VARCHAR(64), 
+  `transistor_count` VARCHAR(64), 
+  `process_size` VARCHAR(64), 
+  `metal_layers` VARCHAR(64), 
+  `metal_type` VARCHAR(64), 
+  `process_technology` VARCHAR(128), 
+  `die_size` VARCHAR(64),
+  `rohs` VARCHAR(128),
+  `vcc_core_range` VARCHAR(64), 
+  `vcc_core_typ` VARCHAR(64), 
+  `vcc_secondary` VARCHAR(64), 
+  `vcc_tertiary` VARCHAR(64), 
+  `vcc_i_o` VARCHAR(64), 
+  `i_o_compatibillity` VARCHAR(64), 
+  `power_min` VARCHAR(64), 
+  `power_typ` VARCHAR(64), 
+  `power_max` VARCHAR(64), 
+  `power_thermal_design` VARCHAR(64), 
+  `temperature_range` VARCHAR(64), 
+  `temperature_grade` VARCHAR(64),
+  `low_power_features` VARCHAR(512), 
+  `instruction_set` VARCHAR(64), 
+  `instruction_set_extensions` VARCHAR(512), 
+  `additional_instructions` VARCHAR(512), 
+  `computer_architecture` VARCHAR(64), 
+  `isa` VARCHAR(64), fpu VARCHAR(64), 
+  `on_chip_peripherals` VARCHAR(512), 
+  `features` VARCHAR(512), 
+  `production_type` VARCHAR(128), 
+  `clone` VARCHAR(512),
+  `release_date` VARCHAR(64), 
+  `initial_price` VARCHAR(64), 
+  `applications` VARCHAR(128), 
+  `military_spec` VARCHAR(64), 
+  `comments` VARCHAR(512), 
+  `reference_1` VARCHAR(512), 
+  `reference_2` VARCHAR(512), 
+  `reference_3` VARCHAR(512), 
+  `reference_4` VARCHAR(512), 
+  `reference_5` VARCHAR(512), 
+  `reference_6` VARCHAR(512), 
+  `reference_7` VARCHAR(512), 
+  `reference_8` VARCHAR(512),
+  `photo_front_filename_1` VARCHAR(512), 
+  `photo_back_filename_1` VARCHAR(512), 
+  `photo_front_filename_2` VARCHAR(512), 
+  `photo_back_filename_2` VARCHAR(512), 
+  `photo_front_filename_3` VARCHAR(512), 
+  `photo_back_filename_3` VARCHAR(512), 
+  `photo_front_filename_4` VARCHAR(512), 
+  `photo_back_filename_4` VARCHAR(512), 
+  `die_photo_filename_1` VARCHAR(512)  
+) ENGINE=InnoDB;
+
 

@@ -3,8 +3,8 @@
 <body>
 <?php
 
-include 'db_connect.php';
-include 'login_functions.php';
+include 'db_connect2.php';
+// include 'login_functions.php';
 include 'log.php';
 
 

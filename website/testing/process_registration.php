@@ -2,8 +2,8 @@
 
 <?php
 
-include 'db_connect.php';
-include 'login_functions.php';
+include 'db_connect2.php';
+// include 'login_functions.php';
 // sec_session_start(); // Our custom secure way of starting a php session. 
 
 
@@ -13,7 +13,7 @@ $the_date = date("Y-m-d H:i:s");
 $fh=fopen($log_file,"a") ;
 
 
-require_once('recaptcha-php/recaptchalib.php');
+require_once('lib/recaptcha-php/recaptchalib.php');
 
 $resp = recaptcha_check_answer($privkey,
                                 $_SERVER["REMOTE_ADDR"],
