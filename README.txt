@@ -1,6 +1,10 @@
-cpu-db.info
+ABANDON PROJECT
+I abandon this project, due to lack of interest.  So the website http://cpu-db.info is dead.  
+But the data is good, and if you want to use the code to start your own website, feel free.
 
 
+
+Details
 
 
 Access: 
