@@ -1,23 +1,19 @@
-ABANDON PROJECT
-I abandon this project, due to lack of interest.  So the website http://cpu-db.info is dead.  
-But the data is good, and if you want to use the code to start your own website, feel free.
-
-
-
-Details
-
-
-Access: 
-	View the database at http://cpu-db.info or open the CSV files with your 
-	favorite spreadsheet editor.
+Title: cpu-db
 
 Description:
 	A set of tables that describe CPUs, MCUs, and DSPs and their various
-	parameters.  
+	parameters.  You can load *.csv files in any spreadsheet program.
+
+Files:
+	Files are organized by manufacturers. Example cpu-db.MANUFACTURER.csv
+	Videogame consoles are in video_game_consoles.csv
+	Die photos are in spreadsheet_files/dieshot_db.csv
+
 
 Goals:
 	Create a complete set of all the varients of common and collectable 
-	CPU, MCUs and DSPs.
+	CPU, MCUs and DSPs. A list of video consoles, with hardware info is
+	included.
 
 Parameters:
 	Manufacturer
